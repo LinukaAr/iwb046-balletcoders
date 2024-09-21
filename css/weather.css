@@ -1,5 +1,9 @@
 
 /*----------------Header CSS ---------------------*/
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
 header {
   width: 100%;
     color: #fff;
@@ -114,7 +118,7 @@ header {
 }
 
 .timeLbl {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 24px;
   color: #ffffff;
   background-color: grey; /* Navy blue for modern look */
