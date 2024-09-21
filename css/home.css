@@ -234,7 +234,7 @@ button {
 }
 .titlepage h2 {
     font-size: 50px;
-    color: #999998;
+    color: #6b7908;
     line-height: 50px;
     font-weight: bold;
     display: block;
@@ -530,9 +530,6 @@ ul.email li i {
 #banner1 .carousel-control-prev:hover {
      color: #6b7908;
 }
-
-
-
 /** end banner section **/
 
 /** about section **/
@@ -629,135 +626,6 @@ ul.email li i {
 
 /** end services section **/
 
-
-
-/** customers **/
-
-.customers {
-    background: #fff;
-    padding-top: 90px;
-    padding-bottom: 90px;
-}
-.customers .titlepage {padding-bottom: 15px;}
-.clients_banner .relative {
-    position: inherit;
-    bottom: 0;
-    padding: 0;
-}
-.custom { text-align: left;  }
-.custom {
-    box-shadow: 0 0 38px rgba(2, 3, 8, 0.15);
-    margin: 36px 0;
-    padding: 40px;
-}
-.custom i img {
-    border-radius: 50%;
-    border: #6b7908e3 solid 10px;
-}
-.clint {
-    text-align: left;
-    padding-left: 20px;
-}
-.clint h4 {
-    color: #6b7908;
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: bold;
-}
-
-.clint span {
-    display: block;
-    line-height: 20px;
-    font-size: 16px;
-    color: #303030;
-}
-
-.custom p {
-   
-    line-height: 30px;
-    padding: 30px 0px;
-    
-}
-
-#myCarousel .carousel-indicators {
-    display: none;
-}
-
-#myCarousel .carousel-control-prev,
-#myCarousel .carousel-control-next {
-    width: 76px;
-    height: 76px;
-    color: #000;
-    font-size: 40px;
-    opacity: 1;
-    top: 49%;
-    z-index: 999;
-}
-
-#myCarousel .carousel-control-prev {
-    left: 4%;
-}
-
-#myCarousel .carousel-control-next {
-    right: 4%;
-}
-
-#myCarousel .carousel-control-next:focus,
-#myCarousel .carousel-control-next:hover,
-#myCarousel .carousel-control-prev:focus,
-#myCarousel .carousel-control-prev:hover {
-    color: #000;
-}
-
-
-/** end customers **/
-
-/** choose section **/
-
-
-.choose {
-    background: url(../images/chose.jpg);
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 90px 0 60px 0;
-}
-
-.choose .titlepage h2 {
-    color: #fff;
-}
-.point {margin-bottom: 30px;}
-.point h3 {
-    max-width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background: #fff;
-    border: #cfd8b7 solid 18px;
-    font-size: 37px;
-    text-align: center;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: #6b7908;
-}
-
-.point span {
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    line-height: 22px;
-    padding-top: 28px;
-    display: block;
-}
-
-
-/** end choose section **/
-
-
 /** news section **/
 
 .news {
@@ -827,84 +695,12 @@ ul.email li i {
 
 /** end news section **/
 
-
-/** contact  **/
-
-.contact {
-    background: #fff;
-    padding-top: 90px;
-}
-
-.map-responsive {margin-top: 90px;}
-.main_form .form_control {
-    padding: 0 20px;
-    margin-bottom: 30px;
-    width: 100%;
-    height: 66px;
-    background: #fff;
-    color: #999998;
-    font-size: 18px;
-    font-weight: normal;
-    border: #6b7908 solid 3px;
-}
-
-.main_form .textarea {
-    margin-bottom: 40px;
-    width: 100%;
-    background: #fff;
-    color: #999998 !important;
-    font-size: 18px;
-    font-weight: normal;
-    padding: 15px 20px 15px 20px;
-    border: #6b7908 solid 3px;
-    height: 179px;
-}
-
-
-.group_btn {display: flex; justify-content: center;}
-
-.main_form .send_btn {
-    font-size: 20px;
-    transition: ease-in all 0.5s;
-    background-color: #323232;
-    text-transform: uppercase;
-    color: #fff;
-    max-width: 169px;
-    width: 100%;
-    display: block;
-    font-weight: 500;
-    height: 69px;
-    line-height: 69px;
-    margin: 0 5px;
-    border-radius: 10px;
-}
-
-.main_form .send_btn:hover {
-    background-color: #6b7908;
-    transition: ease-in all 0.5s;
-    color: #fff;
-}
-
-#request *::placeholder {
-    color: #d0d0cf;
-    opacity: 1;
-}
-
-.datepicker-days {
-    padding: 20px;
-}
-
-
-/** end contact  **/
-
-
-
-
 /** footer **/
 
 .footer {
-    padding-top: 70px;
-    background: #252525;
+    margin-top: 50px;
+    padding-top: 10px;
+    background: #6b7908;;
     text-align: center;
 }
 
@@ -940,62 +736,7 @@ ul.menu_footer li a {
 }
 
 ul.menu_footer li a:hover {
-    color: #6b7908;
-}
-
-.newsl {
-    width: 100%;
-    height: 51px;
-    background: #fff;
-    color: #c9c7c7;
-    font-size: 17px;
-    font-weight: normal;
-    box-shadow: inherit;
-    padding: 0 15px;
-    border: #fff solid 2px;
-    margin-bottom: 20px;
-   
-}
-
-.subsci_btn {
-    font-size: 16px;
-    transition: ease-in all 0.5s;
-    background-color: #6b7908;
-    text-transform: uppercase;
-    color: #fff;
-    display: block;
-    font-weight: normal;
-    line-height: 59px;
-    height: 59px;
-    max-width: 70px;
-    width: 100%;
-    display: block;
-    border:inherit;
-    border-radius:0px;
-}
-
-.subsci_btn:hover {
-    transition: ease-in all 0.5s;
-    box-shadow: 0 0 10px 0px #dddddd5e;
-}
-
-#colof *::placeholder {
-    color: #c9c7c7;
-    opacity: 1;
-}
-
-ul.recent li {
-    display: flex;
-    color: #fff;
-    font-size: 15px;
-    line-height: 20px;
-    margin-bottom: 20px;
-}
-
-ul.recent li img {
-    width: 61px;
-    height: 46px;
-    margin-right: 13px;
+    color: black;
 }
 
 .flot_right {float: right;}
@@ -1009,7 +750,7 @@ ul.top_infomation li {
 }
 
 ul.top_infomation li i {
-    margin-right: 5px;
+    margin-right: 0;
     color: #fff;
     text-align: center;
     width: 30px;
@@ -1025,28 +766,21 @@ ul.top_infomation li a {
 }
 
 ul.top_infomation li a:hover {
-    color: #6b7908;
+    color: black;
 }
 
 .copyright {
-    margin-top: 70px;
-    padding-top: 25px;
     padding-bottom: 25px;
     background: #6b7908;
 }
-ul.social_icon {text-align: right;}
-ul.social_icon li {
-    display: inline-block;
-    margin-left: 40px;
-}
+
+ul.social_icon {text-align: left;}
 
 ul.social_icon li a i {
     font-size: 17px;
     color: #fff;
     transition: ease-in all 0.5s;
-    line-height: 30px;
     border-radius: 50px;
-    text-align: center;
 }
 
 ul.social_icon li a i:hover {
@@ -1059,7 +793,7 @@ ul.social_icon li a i:hover {
     color: #fff;
     font-size: 17px;
     line-height: 22px;
-    text-align: left;
+    text-align: center;
     font-weight: normal;
 }
 
