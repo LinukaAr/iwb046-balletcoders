@@ -362,6 +362,7 @@ button {
 .site-navbar ul li a {
     color: #1c1c1b;
     font-size: 17px;
+    font-weight: bold;
     display: block;
     text-decoration: none;
 }
@@ -626,6 +627,52 @@ ul.email li i {
 
 /** end services section **/
 
+/** choose section **/
+
+
+.choose {
+    background: url(../images/chose.jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 90px 0 60px 0;
+}
+
+.choose .titlepage h2 {
+    color: #fff;
+}
+.point {margin-bottom: 30px;}
+.point h3 {
+    max-width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #fff;
+    border: #cfd8b7 solid 18px;
+    font-size: 37px;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #6b7908;
+}
+
+.point span {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 22px;
+    padding-top: 28px;
+    display: block;
+}
+
+
+/** end choose section **/
+
+
 /** news section **/
 
 .news {
@@ -694,6 +741,88 @@ ul.email li i {
 
 
 /** end news section **/
+
+
+/** customers **/
+
+.customers {
+    background: #fff;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+.customers .titlepage {padding-bottom: 15px;}
+.clients_banner .relative {
+    position: inherit;
+    bottom: 0;
+    padding: 0;
+}
+.custom { text-align: left;  }
+.custom {
+    box-shadow: 0 0 38px rgba(2, 3, 8, 0.15);
+    margin: 36px 0;
+    padding: 40px;
+}
+.custom i img {
+    border-radius: 50%;
+    border: #6b7908e3 solid 10px;
+}
+.clint {
+    text-align: left;
+    padding-left: 20px;
+}
+.clint h4 {
+    color: #6b7908;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.clint span {
+    display: block;
+    line-height: 20px;
+    font-size: 16px;
+    color: #303030;
+}
+
+.custom p {
+   
+    line-height: 30px;
+    padding: 30px 0px;
+    
+}
+
+#myCarousel .carousel-indicators {
+    display: none;
+}
+
+#myCarousel .carousel-control-prev,
+#myCarousel .carousel-control-next {
+    width: 76px;
+    height: 76px;
+    color: #000;
+    font-size: 40px;
+    opacity: 1;
+    top: 49%;
+    z-index: 999;
+}
+
+#myCarousel .carousel-control-prev {
+    left: 4%;
+}
+
+#myCarousel .carousel-control-next {
+    right: 4%;
+}
+
+#myCarousel .carousel-control-next:focus,
+#myCarousel .carousel-control-next:hover,
+#myCarousel .carousel-control-prev:focus,
+#myCarousel .carousel-control-prev:hover {
+    color: #000;
+}
+
+
+/** end customers **/
 
 /** footer **/
 
