@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop</title>
+    <style>
+        /* header */
+
+        .header-area {
+            border-top: #6b7908 solid 15px;
+            width: 100%;
+            position: absolute;
+            z-index: 9999;
+            height: 85px;
+            background: transparent;
+            line-height: 68px;
+        }
+
+        .logo a {
+            color: #1c1c1b;
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .logo a span {
+            color: #6b7908;
+        }
+
+        .navbar-area {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .site-navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-navbar ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+
+        .site-navbar ul li a {
+            color: #1c1c1b;
+            font-size: 17px;
+            font-weight: bold;
+            display: block;
+            text-decoration: none;
+        }
+
+        .site-navbar ul li {
+            padding-right: 55px;
+        }
+
+        .site-navbar ul li:last-child {
+            padding-right: 0;
+        }
+
+        .site-navbar ul li a:hover {
+            color: #6b7908;
+        }
+
+        .site-navbar ul li a.active {
+            color: #6b7908;
+        }
+
+        /* navbar regular css end */
+
+
+        /* nav-toggler css start */
+
+        .nav-toggler {
+            border: 3px solid #363636;
+            padding: 5px;
+            background-color: transparent;
+            cursor: pointer;
+            height: 39px;
+            display: none;
+            z-index: 99999;
+        }
+
+        .nav-toggler span,
+        .nav-toggler span:before,
+        .nav-toggler span:after {
+            width: 28px;
+            height: 3px;
+            background-color: #363636;
+            display: block;
+            transition: .3s;
+        }
+
+        .nav-toggler span:before {
+            content: '';
+            transform: translateY(-9px);
+        }
+
+        .nav-toggler span:after {
+            content: '';
+            transform: translateY(6px);
+        }
+
+        .nav-toggler.toggler-open span {
+            background-color: transparent;
+        }
+
+        .nav-toggler.toggler-open span:before {
+            transform: translateY(0px) rotate(45deg);
+        }
+
+        .nav-toggler.toggler-open span:after {
+            transform: translateY(-3px) rotate(-45deg);
+        }
+
+
+        /* nav-toggler css start */
+
+
+        /* intro-area css start */
+
+        .intro-area {
+            height: calc(100vh - 61px);
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+
+
+
+        ul.email li {
+            display: inline-block;
+            padding-right: 30px;
+        }
+
+        ul.email li:last-child {
+            padding-right: 0;
+        }
+
+        ul.email li a {
+            color: #6b7908;
+            font-size: 17px;
+            text-transform: uppercase;
+        }
+
+        ul.email li i {
+            color: #1a1b1b;
+            font-size: 19px;
+            ;
+            padding-left: 10px;
+        }
+
+        /* end header */
+    </style>
+</head>
+
+<body>
+    <header class="header-area">
+        <div class="container-fluid">
+            <div class="row d_flex">
+                <div class=" col-md-2 col-sm-3">
+                    <div class="logo">
+                        <a href="index.html">Ceylon.<span>AgriCare</span></a>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-9">
+                    <div class="navbar-area">
+                        <nav class="site-navbar">
+                            <ul>
+                                <li><a class="active" href="index.html">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="#news">News</a></li>
+                                <li><a href="weather.html">Weather</a></li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="finance.html">Finance</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                            <button class="nav-toggler">
+                                <span></span>
+                            </button>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-md-2 padd_0 d_none">
+                    <ul class="email text_align_right">
+                        <li><a href="/Login_Page/login.html"><i class="fa fa-user-circle"
+                                    aria-hidden="true"></i></i></a>
+                        </li>
+                        <li><a href="Javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li><a href="Javascript:void(0)"><i class="fa fa-moon-o" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header section ends -->
+</body>
+
+</html>
