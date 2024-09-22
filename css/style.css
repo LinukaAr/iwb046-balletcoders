@@ -223,8 +223,8 @@ button {
 .titlepage {
     padding-bottom: 50px;
 }
-.titlepage span  {
-    font-size: 24px;
+.titlepage span {
+    font-size: 30px;
     color: #6b7908;
     line-height: 30px;
     font-weight: bold;
@@ -232,7 +232,7 @@ button {
     display:block;
     text-transform: uppercase;
 }
-.titlepage h2 {
+.titlepage h2, .titlepage {
     font-size: 50px;
     color: #999998;
     line-height: 50px;
@@ -449,9 +449,9 @@ ul.email li {
      padding-right: 30px;
 }
 ul.email li:last-child {padding-right: 0;}
-ul.email li a {
+ul.email li a { 
      color: #6b7908;
-     font-size: 17px;
+     font-size: 17px; 
      text-transform: uppercase;
 }
 
