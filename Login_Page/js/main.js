@@ -55,26 +55,26 @@
     $(thisAlert).removeClass("alert-validate");
   }
 
-  // Get the elements from the DOM
+  // Get the elements from the DOM (Sign up page)
   var password = document.getElementById("password");
   var confirmPassword = document.getElementById("confirm_password");
   var passwordStatus = document.getElementById("password-match-status");
-  var submitBtn = document.getElementById("submit-btn");
+  var sign_upBtn = document.getElementById("sign_up-btn");
 
-  // Event listener for real-time password matching
+  // Event listener for real-time password matching(Sign up page)
   confirmPassword.addEventListener("input", validatePassword);
   password.addEventListener("input", validatePassword);
 
   function validatePassword() {
-    // Check if passwords match
+    // Check if passwords match(Sign up page)
     if (password.value === confirmPassword.value) {
       passwordStatus.textContent = "Passwords match!";
       passwordStatus.style.color = "green"; // Green color if passwords match
-      submitBtn.disabled = false; // Enable submit button when passwords match
+      sign_upBtn.disabled = false; // Enable submit button when passwords match
     } else {
       passwordStatus.textContent = "Passwords do not match";
       passwordStatus.style.color = "red"; // Red color if passwords do not match
-      submitBtn.disabled = true; // Disable submit button if passwords don't match
+      sign_upBtn.disabled = true; // Disable submit button if passwords don't match
     }
   }
 })(jQuery);

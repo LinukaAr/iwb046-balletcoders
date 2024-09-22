@@ -458,6 +458,11 @@ iframe {
   opacity: 1;
 }
 
+.login100-form-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
 /*------------------------------------------------------------------
 [ Alert validate ]*/
 
