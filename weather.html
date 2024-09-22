@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
   <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+  <!-- fontawsome icons-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <link rel="stylesheet" href="css/weather.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -71,8 +73,8 @@
 
   <!-----------------------------------Current Weather------------------------->
   <section id="current-weather">
-    <h1 class="heders">Current Weather</h1>
-    <div class="user-interface">
+    <h1 class="titlepage text_align_center">Current Weather</h1>
+    <div class="user-interface text_align_center">
       <input type="text" id="location-input" placeholder="Enter location" />
       <button id="search-button">Search</button>
     </div>
@@ -90,17 +92,17 @@
     <div style="overflow-x:auto;">
       <table class="tblW">
         <tr>
-          <td><strong class="locationPara">📍Location</strong></td>
+          <td><strong class="locationPara"><i class="fa-solid fa-location-crosshairs" style="color: #ce1a0d;"></i> Location</strong></td>
 
-          <td><strong class="tempPara">🌡Temperature</strong></td>
+          <td><strong class="tempPara"><i class="fa-solid fa-temperature-three-quarters" style="color: #df2b0c;"></i> Temperature</strong></td>
 
-          <td><strong class="humidityPara">❄️Humidity</strong></td>
+          <td><strong class="humidityPara"><i class="fa-solid fa-snowflake" style="color: #0754da;"></i> Humidity</strong></td>
 
-          <td><strong class="windPara">🍃Wind Speed</strong></td>
+          <td><strong class="windPara"><i class="fa-solid fa-wind"></i> Wind Speed</strong></td>
 
-          <td><strong class="conditionPara">💧Condition</strong></td>
+          <td><strong class="conditionPara"><i class="fa-solid fa-smog" style="color: #74C0FC;"></i> Condition</strong></td>
 
-          <td><strong class="regionPara">🎗Region</strong></td>
+          <td><strong class="regionPara"><i class="fa-solid fa-mountain" style="color: #FFD43B;"></i> Region</strong></td>
 
           <td><strong class="countryPara">🗺 Country</strong></td>
 
@@ -127,7 +129,7 @@
   <!-----------------------------------Current Weather END------------------------->
 
   <section id="weather-forecast">
-    <h1 class="heders">Weather Forecast 🗺</h1>
+    <h1 class="titlepage text_align_center">Weather Forecast 🗺</h1>
 
     <div class="date-serch">
       From : <input id="startDate" type="date">
@@ -213,13 +215,13 @@
   </section>
 
   <section id="weather-map">
-    <h1 class="heders">Map</h1>
+    <h1 class="titlepage text_align_center">Map</h1>
     <div id="map" class="map-d">
     </div>
   </section>
   <!--------------------------------------news cards------------------------------------------------->
   <section id="news">
-    <h1 class="heders">Top stories</h1>
+    <h1 class="titlepage text_align_center">Top stories</h1>
       <div class="grid-cols-1 sm:grid md:grid-cols-3">
         <div
           class="mx-3 mt-6 flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0">

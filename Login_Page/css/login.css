@@ -22,7 +22,7 @@
 }
 
 /*//////////////////////////////////////////////////////////////////
-[ RESTYLE TAG ]*/
+  [ RESTYLE TAG ]*/
 
 * {
   margin: 0px;
@@ -172,7 +172,7 @@ iframe {
 }
 
 /*//////////////////////////////////////////////////////////////////
-[ Utility ]*/
+  [ Utility ]*/
 .txt1 {
   font-family: Montserrat-SemiBold;
   font-size: 16px;
@@ -192,13 +192,13 @@ iframe {
 }
 
 /*//////////////////////////////////////////////////////////////////
-[ logo ]*/
+  [ logo ]*/
 .logo {
   border-radius: 10%;
 }
 
 /*//////////////////////////////////////////////////////////////////
-[ login ]*/
+  [ login ]*/
 
 .limiter {
   width: 100%;
@@ -231,7 +231,7 @@ iframe {
 }
 
 /*==================================================================
-[ Form ]*/
+  [ Form ]*/
 
 .login100-form {
   width: 100%;
@@ -247,7 +247,7 @@ iframe {
 }
 
 /*------------------------------------------------------------------
-[ Button sign in with ]*/
+  [ Button sign in with ]*/
 .btn-google {
   font-family: Montserrat-SemiBold;
   font-size: 18px;
@@ -319,7 +319,7 @@ iframe {
 }
 
 /*------------------------------------------------------------------
-[ Input ]*/
+  [ Input ]*/
 
 .wrap-input100 {
   width: 100%;
@@ -343,7 +343,7 @@ iframe {
   padding: 0 20px;
 }
 /*------------------------------------------------------------------
-[ Focus Input ]*/
+  [ Focus Input ]*/
 
 .focus-input100 {
   position: absolute;
@@ -394,7 +394,7 @@ iframe {
 }
 
 /*------------------------------------------------------------------
-[ Button ]*/
+  [ Button ]*/
 .container-login100-form-btn {
   width: 100%;
   display: -webkit-box;
@@ -458,13 +458,8 @@ iframe {
   opacity: 1;
 }
 
-.login100-form-btn:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
 /*------------------------------------------------------------------
-[ Alert validate ]*/
+  [ Alert validate ]*/
 
 .validate-input {
   position: relative;
@@ -531,7 +526,7 @@ iframe {
 }
 
 /*//////////////////////////////////////////////////////////////////
-[ Responsive ]*/
+  [ Responsive ]*/
 @media (max-width: 768px) {
   .wrap-login100 {
     padding-left: 60px;

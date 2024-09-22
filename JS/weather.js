@@ -146,61 +146,65 @@ $(document).ready(function() {
 // Fetch weather forecast for the selected location and date range
 function searchForecast() {
   const startDate = document.getElementById("startDate").value;
-const endDate = document.getElementById("endDate").value;
+  const endDate = document.getElementById("endDate").value;
+  const location = countryP.text();
 
-if (!location) {
-  alert("Please enter a location.");
-  return;
-}
+  console.log("Start Date:", startDate, "End Date:", endDate);
 
-$.ajax({
-  method: "GET",
-  url: `http://localhost:8081/weather/${location}?start=${startDate}&end=${endDate}`, // Update backend URL
-  success: (data) => {
-    if (data.error) {
-      console.error("Error fetching forecast data:", data.error);
-      alert("Error fetching forecast data. Please try again.");
-      return;
-    }
-
-    // Check if forecast data is present
-    if (!data.forecast || !Array.isArray(data.forecast)) {
-      console.error("Invalid forecast data:", data);
-      alert("Invalid forecast data received.");
-      return;
-    }
-
-    // Update the forecast table with the response data
-    updateForecastTable(data.forecast);
-  },
-  error: (jqXHR, textStatus, errorThrown) => {
-    alert("Error fetching forecast data. Please try again.");
-    console.error("Error details:", textStatus, errorThrown);
-  }
-});
-
-// Function to update the forecast table
-function updateForecastTable(forecastData) {
-  // Log the data to verify its structure
-  console.log("Forecast data:", forecastData);
-
-  // Check if data is an array and has the expected length
-  if (!Array.isArray(forecastData) || forecastData.length < 7) {
-    console.error("Invalid forecast data:", forecastData);
-    alert("Invalid forecast data received.");
+  if (!startDate || !endDate) {
+    alert("Please select both start and end dates.");
     return;
   }
 
-  // Assuming data is an array of weather forecast for each day
-  for (let i = 0; i < 7; i++) {
-    const forecast = forecastData[i];
-    if (forecast && forecast.date && forecast.icon && forecast.condition) {
-      document.getElementById(`date${i + 1}`).innerText = forecast.date;
-      document.getElementById(`img${i + 1}`).src = forecast.icon; // Icon URL from the data
-      document.querySelector(`.title${i + 1}`).innerText = forecast.condition;
-    } else {
-      console.error(`Invalid forecast data at index ${i}:`, forecast);
+  $.ajax({
+    method: "GET",
+    url: `http://localhost:8081/weatherForecast/${location}?start=${startDate}&end=${endDate}`,
+    success: (data) => {
+      console.log("Forecast data received:", data);  // Log the data to inspect it
+      if (data.error) {
+        console.error("Error fetching forecast data:", data.error);
+        alert("Error fetching forecast data. Please try again.");
+        return;
+      }
+      updateForecast(data.forecast, startDate, endDate);  // Update UI with forecast data
+    },
+    error: (jqXHR, textStatus, errorThrown) => {
+      alert("Error fetching forecast data. Please try again.");
+      console.error("Error details:", textStatus, errorThrown);
     }
+  });
+}
+
+
+
+function getDateRange(startDate, endDate) {
+  const start = new Date(startDate);
+  const end = new Date(endDate);
+  const dates = [];
+
+  for (let dt = start; dt <= end; dt.setDate(dt.getDate() + 1)) {
+      dates.push(dt.toISOString().split('T')[0]); // Format the date as YYYY-MM-DD
   }
 
-}}
+  return dates;
+}
+
+function updateForecast(forecast, startDate, endDate) {
+  const forecastDays = forecast.forecastday;
+  const dateRange = getDateRange(startDate, endDate); // Get the range of dates
+  
+  dateRange.forEach((date, index) => {
+    const dayData = forecastDays.find(day => day.date === date); // Check if the data exists for this date
+    
+    if (dayData && index < 7) {  // If the day data exists and it's within the first 7 days
+      document.getElementById(`date${index + 1}`).innerText = dayData.date;
+      document.getElementById(`img${index + 1}`).src = dayData.day.condition.icon || 'path/to/default/icon.png';
+      document.querySelector(`.title${index + 1}`).innerText = dayData.day.condition.text;
+    } else {
+      // Set default values or "No data" for missing days
+      document.getElementById(`date${index + 1}`).innerText = "No data";
+      document.getElementById(`img${index + 1}`).src = 'path/to/default/icon.png';
+      document.querySelector(`.title${index + 1}`).innerText = "No forecast available";
+    }
+  });
+}
