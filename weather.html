@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather</title>
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- style css -->
+  
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Responsive-->
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <!-- Tweaks for older IEs-->
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+  <!-- fontawsome icons-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link rel="stylesheet" href="css/weather.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""   />
+
+</head>
+
+<body>
+   <!-- header -->
+   <header class="header-area">
+    <div class="container-fluid">
+       <div class="row d_flex">
+          <div class=" col-md-2 col-sm-3">
+             <div class="logo">
+                <a href="index.html">Ceylon.<span>AgriCare</span></a>
+             </div>
+          </div>
+          <div class="col-md-8 col-sm-9">
+             <div class="navbar-area">
+                <nav class="site-navbar">
+                   <ul>
+                      <li><a class="active" href="index.html">Home</a></li>
+                      <li><a href="about.html">About</a></li>
+                      <li><a href="service.html">Service</a></li>
+                       <li><a href="Javascript:void(0)">Shop</a></li>
+                        <li><a href="testimonail.html">Testimonail</a></li>
+                      <li><a href="blog.html">Blog</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                   </ul>
+                   <button class="nav-toggler">
+                   <span></span>
+                   </button>
+                </nav>
+             </div>
+          </div>
+          <div class="col-md-2 padd_0 d_none">
+             <ul class="email text_align_right">
+                <li><a href="Javascript:void(0)">Login</a>
+                </li>
+                <li><a href="Javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i>
+                   </a>
+                </li>
+             </ul>
+          </div>
+       </div>
+    </div>
+ </header>
+  <!--------------------------------header END-------------------------------->
+
+  <!-----------------------------------Current Weather------------------------->
+  <section id="current-weather">
+    <h1 class="titlepage text_align_center">Current Weather</h1>
+    <div class="user-interface text_align_center">
+      <input type="text" id="location-input" placeholder="Enter location" />
+      <button id="search-button">Search</button>
+    </div>
+    <div class="weather-card">
+      <div class="weather-icon">
+        <img class="weatherIcon1" id="weatherIcon" alt="Weather Icon" src="images/weather/icons8-cloud-lightning-96.png" />
+      </div>
+      <div class="weather-info">
+        <h3 class="location name" id="location">Galle</h3>
+        <p class="temperature temp_c">25°C</p>
+        <p class="description url">Cloudy</p>
+      </div>
+      <div class="timeLbl" id="local-time"></div>
+    </div>
+    <div style="overflow-x:auto;">
+      <table class="tblW">
+        <tr>
+          <td><strong class="locationPara"><i class="fa-solid fa-location-crosshairs" style="color: #ce1a0d;"></i> Location</strong></td>
+
+          <td><strong class="tempPara"><i class="fa-solid fa-temperature-three-quarters" style="color: #df2b0c;"></i> Temperature</strong></td>
+
+          <td><strong class="humidityPara"><i class="fa-solid fa-snowflake" style="color: #0754da;"></i> Humidity</strong></td>
+
+          <td><strong class="windPara"><i class="fa-solid fa-wind"></i> Wind Speed</strong></td>
+
+          <td><strong class="conditionPara"><i class="fa-solid fa-smog" style="color: #74C0FC;"></i> Condition</strong></td>
+
+          <td><strong class="regionPara"><i class="fa-solid fa-mountain" style="color: #FFD43B;"></i> Region</strong></td>
+
+          <td><strong class="countryPara">🗺 Country</strong></td>
+
+          <td><strong>longitude</strong></td>
+
+          <td><strong>latitude</strong></td>
+
+        </tr>
+        <tr>
+          <td><span class="tz_id">Asia/colombo</span></td>
+          <td><span class="temp_c">25</span></td>
+          <td><span class="humidity">33</span></td>
+          <td><span class="wind_kph">75.22</span></td>
+          <td class="url">Cloudy</td>
+          <td><span class="region">Western</span></td>
+          <td><span class="country">Sri-Lanka</span></td>
+          <td><span id="lon">11.33</span></td>
+          <td><span id="lat">20.55</span></td>
+        </tr>
+
+      </table>
+    </div>
+  </section>
+  <!-----------------------------------Current Weather END------------------------->
+
+  <section id="weather-forecast">
+    <h1 class="titlepage text_align_center">Weather Forecast 🗺</h1>
+
+    <div class="date-serch">
+      From : <input id="startDate" type="date">
+      To : <input id="endDate" type="date">
+
+      <button id="search-button" onclick="searchForecast()">Search Date</button>
+    </div>
+    <hr>
+    <div style="overflow-x:auto;">
+      <table class="tblForcast">
+        <tr>
+          <td>
+            <strong id="date1">2024-02-24</strong>
+          </td>
+          <td>
+            <strong id="date2">2024-02-25</strong>
+          </td>
+          <td>
+            <strong id="date3">2024-02-26</strong>
+          </td>
+          <td>
+            <strong id="date4">2024-02-27</strong>
+          </td>
+          <td>
+            <strong id="date5">2024-02-28</strong>
+          </td>
+          <td>
+            <strong id="date6">2024-02-29</strong>
+          </td>
+          <td>
+            <strong id="date7">2024-02-30</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img id="img1" class="img" src="images/weather/icons8-cloud-96.png" alt="">
+          </td>
+          <td>
+            <img id="img2" class="img" src="images/weather/icons8-cloud-lightning-96.png" alt="">
+          </td>
+          <td>
+            <img id="img3" class="img" src="images/weather/icons8-partly-cloudy-day-96.png" alt="">
+          </td>
+          <td>
+            <img id="img4" class="img" src="images/weather/icons8-night-wind-96.png" alt="">
+          </td>
+          <td>
+            <img id="img5" class="img" src="images/weather/icons8-storm-94.png" alt="">
+          </td>
+          <td>
+            <img id="img6" class="img" src="images/weather/icons8-cloud-lightning-96.png" alt="">
+          </td>
+          <td>
+            <img id="img7" class="img" src="images/weather/icons8-night-wind-96.png" alt="">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong class="title1">cloud</strong>
+          </td>
+          <td>
+            <strong class="title2">cloud-lightning</strong>
+          </td>
+          <td>
+            <strong class="title3">partly-cloudy</strong>
+          </td>
+          <td>
+            <strong class="title4">night-wind</strong>
+          </td>
+          <td>
+            <strong class="title5">storm</strong>
+          </td>
+          <td>
+            <strong class="title6">cloud-lightning</strong>
+          </td>
+          <td>
+            <strong class="title7">night-wind</strong>
+          </td>
+        </tr>
+
+      </table>
+    </div>
+  </section>
+
+  <section id="weather-map">
+    <h1 class="titlepage text_align_center">Map</h1>
+    <div id="map" class="map-d">
+    </div>
+  </section>
+  <!--------------------------------------news cards------------------------------------------------->
+  <section id="news">
+    <h1 class="titlepage text_align_center">Top stories</h1>
+      <div class="grid-cols-1 sm:grid md:grid-cols-3">
+        <div
+          class="mx-3 mt-6 flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0">
+          <a href="#!" id="a1">
+            <img id="imgN1" class="rounded-t-lg" src=""
+              alt="" />
+          </a>
+          <div class="p-6">
+            <h5 id="title1" class="mb-2 text-xl font-medium leading-tight text-neutral-800">
+            </h5>
+            <p id="p1" class="mb-4 text-base text-neutral-600">
+             
+            </p>
+          </div>
+          <div class="mt-auto border-t-2 border-neutral-100 px-6 py-3 text-center dark:border-neutral-600">
+            <small id="ptime1">Looking for new news....</small>
+          </div>
+        </div>
+        <div
+          class="mx-3 mt-6 flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0">
+          <a href="#!" id="a2">
+            <img id="imgN2" class="rounded-t-lg" src=""
+              alt="" />
+          </a>
+          <div class="p-6">
+            <h5 id="title2" class="mb-2 text-xl font-medium leading-tight text-neutral-800">
+            </h5>
+            <p id="p2" class="mb-4 text-base text-neutral-600 ">
+              
+            </p>
+          </div>
+          <div class="mt-auto border-t-2 border-neutral-100 px-6 py-3 text-center dark:border-neutral-600">
+            <small id="ptime2">Looking for new news....</small>
+          </div>
+        </div>
+        <div
+          class="mx-3 mt-6 flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0">
+          <a href="#!" id="a3">
+            <img id="imgN3" class="rounded-t-lg" src=""
+              alt="" />
+          </a>
+          <div class="p-6">
+            <h5 id="title3" class="mb-2 text-xl font-medium leading-tight text-neutral-800 ">
+            </h5>
+            <p id="p3" class="mb-4 text-base text-neutral-600">
+              
+            </p>
+          </div>
+          <div class="mt-auto border-t-2 border-neutral-100 px-6 py-3 text-center dark:border-neutral-600 ">
+            <small id="ptime3">Looking for new news....</small>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <footer>
+    <div class="footer">
+       <div class="container">
+          <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                      <div class="hedingh3  text_align_left">
+                         <h3>Newsletter</h3>
+                         <form id="colof" class="form_subscri">
+                            <input class="newsl" placeholder="Enter Email" type="text" name="Email">
+                            <button class="subsci_btn"><img src="images/new.png" alt="#"/></button>
+                         </form>
+                         
+                      </div>
+                   </div>
+                   <div class="col-lg-3 col-md-6">
+                      <div class="hedingh3 text_align_left">
+                         <h3> Explore</h3>
+                         <ul class="menu_footer">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="service.html">Service</a></li>
+                            <li><a href="Javascript:void(0)">Shop</a></li>
+                            <li><a href="testimonail.html">Testimonail</a></li>
+                            <li><a href="contact.html">Contact us</a></li>
+                         </ul>
+                      </div>
+                   </div>
+                   <div class="col-lg-3 col-md-6">
+                      <div class="hedingh3 text_align_left">
+                         <h3>Recent Posts</h3>
+                         <ul class="recent">
+                            <li><img src="images/resent.jpg" alt="#"/>Pests Controll </li>
+                            <li><img src="images/resent.jpg" alt="#"/>High productivity</li>
+                         </ul>
+                      </div>
+                   </div>
+                    <div class="col-lg-3 col-md-6">
+                      <div class="hedingh3  flot_right text_align_left">
+                         <h3>ContacT</h3>
+                         <ul class="top_infomation">
+                            <li><i class="fa fa-phone" aria-hidden="true"></i>
+                               +94 1234567892
+                            </li>
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i>
+                               <a href="Javascript:void(0)">ceyloneagricare@gmail.com</a>
+                            </li>
+                         </ul>
+                      </div>
+                   </div>
+                </div>
+             </div>
+        
+       <div class="copyright">
+          <div class="container">
+             <div class="row d_flex">
+                <div class="col-md-8">
+                   <p>© 2024 All Rights Reserved. Design by BalletCoders</a></p>
+                </div>
+                <div class="col-md-4">
+                      <ul class="social_icon ">
+                         <li><a href="Javascript:void(0)"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                         <li><a href="Javascript:void(0)"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                         <li><a href="Javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                      </ul>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </footer>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+  <script src="JS/weather.js"></script>
+</body>
+
+</html>
