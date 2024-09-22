@@ -61,7 +61,7 @@ service / on new http:Listener(8081) {
     
    // Endpoint for fetching news data
     resource function get news(http:Caller caller, http:Request req) returns error? {
-        string newsApiKey = "076e0ceaa2914eacb2d1cff055da7f32"; 
+        string newsApiKey = ""; 
         string baseUrl = "https://newsapi.org/v2/";
 
         // Define the query parameters
