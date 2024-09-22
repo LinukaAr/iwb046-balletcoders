@@ -55,6 +55,23 @@
     $(thisAlert).removeClass("alert-validate");
   }
 
+  //Email validation
+  const emailInput = document.getElementById("emailInput");
+  const emailFeedback = document.getElementById("emailFeedback");
+
+  emailInput.addEventListener("input", function () {
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (emailPattern.test(emailInput.value)) {
+      emailFeedback.style.display = "none"; // Hide feedback if valid
+      emailInput.setCustomValidity(""); // Clear validation message
+    } else {
+      emailFeedback.textContent = "Please enter a valid email address"; // Show feedback
+      emailFeedback.style.display = "block";
+      emailInput.setCustomValidity("Invalid"); // Set custom validity message
+    }
+  });
+
   // Get the elements from the DOM (Sign up page)
   var password = document.getElementById("password");
   var confirmPassword = document.getElementById("confirm_password");
