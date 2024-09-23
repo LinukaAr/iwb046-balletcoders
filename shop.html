@@ -238,18 +238,23 @@
             border: none;
             cursor: pointer;
         }
+
         /* shop section ends */
 
         /*Cart section starts*/
 
         .cartTab {
-            width: 400px;
+            width: 410px;
             background-color: #6b7908;
             color: #fff;
             position: fixed;
-            inset: 70px 0 0 auto;
+            inset: 70px -410px 0 auto;
             display: grid;
             grid-template-rows: 70px 1fr 70px;
+        }
+
+        .showCart .cartTab {
+            inset: 70px 0 0 auto;
         }
 
         .cartTab h2 {
@@ -277,14 +282,42 @@
         .cartTab .listCart .cartItem img {
             width: 90%;
         }
-        .cartTab .listCart .cartItem{
+
+        .cartTab .listCart .cartItem {
             display: grid;
             grid-template-columns: 70px 150px 65px 1fr;
             gap: 10px;
             text-align: center;
             align-items: center;
         }
-        
+
+        .listCart .cartItemQty span {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-color: #eee;
+            color: #555;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .listCart .cartItemQty span:nth-child(2) {
+            background-color: transparent;
+            color: #eee;
+        }
+
+        .listCart .item:nth-child(even) {
+            background-color: #eee1;
+        }
+
+        .listCart {
+            overflow: auto;
+        }
+
+        .listCart::-webkit-scrollbar {
+            width: 0;
+        }
+
         /*Cart section ends*/
     </style>
 </head>
@@ -333,54 +366,56 @@
     <!-- header section ends -->
 
     <!-- shop section starts -->
-    <div class="container">
-        <header class="shop-content">
-            <div class="title">Fertilizers</div>
-            <div class="icon-cart">
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
-                </svg>
-                <span>0</span>
-            </div>
-        </header>
-        <div class="listProducts">
-            <div class="item">
-                <img src="images/TeaFertilizer.png" alt="">
-                <h4>Tea</h4>
-                <h6>Mixture: TU-709</h6>
-                <h6>Weight: 10kg</h6>
-                <div class="price">Rs. 1000</div>
-                <button class="addCart">Add to cart</button>
-            </div>
-        </div>
-    </div>
-    <!-- shop section ends -->
-
-    <!--Cart section starts-->
-    <div class="cartTab">
-        <h2>Shopping Cart</h2>
-        <div class="listCart">
-            <div class="cartItem">
-                <div class="cartItemImg">
+    <div class="showCart">
+        <div class="container">
+            <header class="shop-content">
+                <div class="title">Fertilizers</div>
+                <div class="icon-cart">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
+                    </svg>
+                    <span>0</span>
+                </div>
+            </header>
+            <div class="listProducts">
+                <div class="item">
                     <img src="images/TeaFertilizer.png" alt="">
-                </div>
-                <div class="cartItemName">
-                    Tea
-                </div>
-                <div class="cartItemPrice">
-                    Rs. 1000
-                </div>
-                <div class="cartItemQty">
-                    <span class="minus"><</span>
-                    <span>1</span>
-                    <span class="plus">></span>
+                    <h4>Tea</h4>
+                    <h6>Mixture: TU-709</h6>
+                    <h6>Weight: 10kg</h6>
+                    <div class="price">Rs. 1000</div>
+                    <button class="addCart">Add to cart</button>
                 </div>
             </div>
         </div>
-        <div class="btn">
-            <button class="closeBtn">CLOSE</button>
-            <button class="checkOutBtn">CHECKOUT</button>
+        <!-- shop section ends -->
+
+        <!--Cart section starts-->
+        <div class="cartTab">
+            <h2>Shopping Cart</h2>
+            <div class="listCart">
+                <div class="cartItem">
+                    <div class="cartItemImg">
+                        <img src="images/TeaFertilizer.png" alt="">
+                    </div>
+                    <div class="cartItemName">
+                        Tea
+                    </div>
+                    <div class="cartItemPrice">
+                        Rs. 1000
+                    </div>
+                    <div class="cartItemQty">
+                        <span class="minus">&lt;</span>
+                        <span>1</span>
+                        <span class="plus">&gt;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="btn">
+                <button class="closeBtn">CLOSE</button>
+                <button class="checkOutBtn">CHECKOUT</button>
+            </div>
         </div>
     </div>
 
