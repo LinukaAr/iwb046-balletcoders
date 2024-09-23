@@ -450,11 +450,6 @@ ul.email li {
      padding-right: 30px;
 }
 ul.email li:last-child {padding-right: 0;}
-ul.email li a { 
-     color: #6b7908;
-     font-size: 17px; 
-     text-transform: uppercase;
-}
 
 ul.email li i {
      color: #1a1b1b;
@@ -510,7 +505,7 @@ ul.email li i {
      background-color: #ffffffc4;
      color: #000000;
      font-size: 60px;
-     opacity: 1;
+     opacity: 0.7;
      top: 50%;
     
      z-index: 999;
@@ -1024,3 +1019,57 @@ ul.social_icon li a i:hover {
 }
 
 .about_page .about, .service_page .services, .blog_page .news {padding-bottom: 90px;} 
+
+
+/*=============== SEARCH ===============*/
+.search{
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: hsla(230, 12%, 96%, .6);
+    backdrop-filter: blur(16px);
+    padding: 8rem 1.5rem;
+    transition: top .4s;
+  }
+  
+  .search__form{
+    display: flex;
+    align-items:center;
+    column-gap: .5rem;
+    background-color: whitesmoke;
+    border: 2px solid #6b7908;
+    border-radius: 1rem;
+  }
+  
+  .fa-search{
+    padding-left: 0.5rem;
+    font-size: 1.25rem;
+    color: #6b7908;
+  }
+  
+  .search__input{
+    width: 100%;
+    padding-block: 0.5rem;
+    background-color: whitesmoke;
+    color: #6b7908;
+    border: 2px solid whitesmoke;
+    border-radius: 1rem;
+
+  }
+  
+  .fa-times{
+    position: absolute;
+    top: 5.5rem;
+    right: 2rem;
+    font-size: 2rem;
+    color: v#6b7908;
+    cursor: pointer;
+  }
+  
+  /* Show search */
+  .show-search{
+    top: 0;
+  }
