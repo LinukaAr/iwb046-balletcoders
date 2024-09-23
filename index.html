@@ -49,17 +49,15 @@
                                     <li><a href="finance.html">Finance</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>
-                                
+
                             </nav>
                         </div>
                     </div>
                     <div class="col-md-2 padd_0 d_none">
                         <ul class="email text_align_right">
-                            <li><a href="login.html"><i class="fa fa-user-circle"
-                                        aria-hidden="true"></i></i></a>
+                            <li><a href="login.html"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
                             </li>
-                            <li><a href="Javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i>
-                                </a>
+                            <li><i class="fa fa-search" aria-hidden="true" id="search-icon"></i>
                             </li>
 
                         </ul>
@@ -68,6 +66,18 @@
             </div>
         </header>
         <!-- header section ends -->
+
+        <!-- Search starts -->
+        <div class="search" id="search-content">
+
+            <i class="fa fa-times" aria-hidden="true" id="search-close"></i>
+            <form action="" class="search__form">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="search" placeholder="What are you looking for?" class="search__input">
+            </form>
+
+        </div>
+        <!-- Search ends -->
 
         <!-- top starts -->
         <div class="slider_main" id="home"></div>
@@ -410,8 +420,8 @@
                         </div>
                     </div>
                 </div>
-                
-                
+
+
             </div>
             <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                 <i class="fa fa-angle-left" aria-hidden="true"></i>
