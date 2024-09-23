@@ -163,8 +163,40 @@
         /* end header */
 
         /* shop section starts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
         .container {
+            font-family: 'Poppins', sans-serif;
+            margin: auto;
             padding-top: 100px;
+            width: 900px;
+            max-width: 90vw;
+            text-align: center;
+        }
+        svg{
+            width: 30px;
+        }
+        .shop-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .shop-content .icon-cart{
+            position: relative;
+        }
+        .shop-content .icon-cart span{
+            display: inline;
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            right: -20px;
         }
     </style>
 </head>
@@ -215,15 +247,23 @@
      
     <!-- shop section starts -->
      <div class="container">
-        <header>
-            <div class="title">Fertilizers</div><br>
-            <p>Fertilizers are blended based on the recommendations of the various Government Research Institutions responsible for the respective crops.</p>
+        <header class="shop-content">
+            <div class="title">Fertilizers</div>
             <div class="icon-cart">
-                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
                   </svg>
+                  <span>0</span>
             </div>
         </header>
+        <div class="listProducts">
+            <div class="item">
+                <img src="images/fertilizer1.jpg" alt="">
+                <h4>Tea - TU709</h4>
+                <div class="price">Rs. 1000</div>
+                <button class="addCart">Add to cart</button>
+            </div>
+        </div>
      </div>
 
 
