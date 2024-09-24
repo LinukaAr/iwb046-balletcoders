@@ -20,7 +20,7 @@ function calculateLoan() {
   if (isFinite(monthly)) {
     document.getElementById(
       "loan-result"
-    ).innerHTML = `Your Monthly Payment: $${monthly.toFixed(2)}`;
+    ).innerHTML = `Your Monthly Payment: Rs.${monthly.toFixed(2)}`;
   } else {
     document.getElementById("loan-result").innerHTML =
       "Please check your numbers.";

@@ -24,7 +24,7 @@ header {
 }
 
 .overlay {
-  background: rgba(107, 121, 8, 255);
+  background: rgb(174, 137, 107);
   position: absolute;
   top: 0;
   left: 0;
