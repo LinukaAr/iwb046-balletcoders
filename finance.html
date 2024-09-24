@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agricultural Finance for Farmers</title>
+    <link rel="stylesheet" href="finance.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="hero-section">
+      <div class="overlay">
+        <div class="container">
+          <nav>
+            <h1>CEYLON.AGRICARE</h1>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#loan-calculator">Loan Calculator</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </nav>
+          <div class="hero-content">
+            <h3>Empowering Farmers Financially</h3>
+            <p>
+              Get access to loans, grants, and financial tools to grow your
+              farming business.
+            </p>
+            <a href="#services" class="btn">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>
+          We are committed to providing tailored financial services to farmers.
+          Whether you're looking for a loan to expand your farm, or need tools
+          to manage your finances, we are here to help!
+        </p>
+        <img src="aboutUs.jpg" alt="Farmers working" class="responsive-img" />
+      </div>
+    </section>
+
+    <section id="services" class="services-section">
+      <div class="container">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+          <div class="card">
+            <img src="loans.png" alt="Loan Service" />
+            <h3>Farm Loans</h3>
+            <p>
+              Get flexible loan options for machinery, seeds, and land
+              acquisition.
+            </p>
+          </div>
+          <div class="card">
+            <img src="grants.png" alt="Grant Service" />
+            <h3>Grants for Farmers</h3>
+            <p>
+              Access government grants to support organic and sustainable
+              farming practices.
+            </p>
+          </div>
+          <div class="card">
+            <img src="digital_tools.png" alt="Tools Service" />
+            <h3>Financial Tools</h3>
+            <p>
+              Use our online tools for managing farm expenses, budgeting, and
+              profit tracking.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="loan-calculator" class="calculator-section">
+      <div class="container">
+        <h2>Loan Calculator</h2>
+        <p>Use our simple loan calculator to estimate your monthly payments.</p>
+        <form class="loan-form">
+          <label for="amount">Loan Amount:</label>
+          <input type="number" id="amount" placeholder="Enter amount" />
+
+          <label for="interest">Interest Rate (%):</label>
+          <input
+            type="number"
+            id="interest"
+            placeholder="Enter interest rate"
+          />
+
+          <label for="years">Loan Term (Years):</label>
+          <input type="number" id="years" placeholder="Enter loan term" />
+
+          <button type="button" onclick="calculateLoan()">Calculate</button>
+        </form>
+        <div id="loan-result" class="result">
+          <!-- Result will appear here -->
+        </div>
+      </div>
+    </section>
+
+    <!--  footer -->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="hedingh3 text_align_left">
+                            <h3>Contac us</h3>
+                            <ul class="top_infomation">
+                                <li><a href="Javascript:void(0)"><i class="fa fa-phone" aria-hidden="true"></i>
+                                        +94 123456789</a>
+                                </li>
+                                <li>
+                                    <a href="Javascript:void(0)"><i class="fa fa-envelope"
+                                            aria-hidden="true"></i>ceylonagricare@gmail.com</a>
+                                </li>
+                                <li><a href="Javascript:void(0)"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        Colombo 0006, Sri Lanka</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="hedingh3 flot_right text_align_left">
+                            <h3>Social media</h3>
+                            <ul class="social_icon top_infomation ">
+                                <li><a href="Javascript:void(0)"><i class="fa fa-facebook"
+                                            aria-hidden="true"></i>facebook</a>
+                                </li>
+                                <li><a href="Javascript:void(0)"><i class="fa fa-instagram"
+                                            aria-hidden="true"></i>instagram</a>
+                                </li>
+                                <li><a href="Javascript:void(0)"><i class="fa fa-twitter"
+                                            aria-hidden="true"></i>twitter</a>
+                                </li>
+                                <li><a href="Javascript:void(0)"><i class="fa fa-linkedin-square"
+                                            aria-hidden="true"></i>linkedin</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="hedingh3 flot_right text_align_left">
+                            <h3>support</h3>
+                            <ul class="top_infomation">
+                                <li><a href="Javascript:void(0)">FAQ</a>
+                                </li>
+                                <li><a href="Javascript:void(0)">Contact Support</a>
+                                </li>
+                                <li><a href="Javascript:void(0)">Feedback</a>
+                                </li>
+                                <li><a href="Javascript:void(0)">Terms & Conditions</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="hedingh3  flot_right text_align_left">
+
+                            <h3> Explore</h3>
+                            <ul class="menu_footer">
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="#news">News</a></li>
+                                <li><a href="weather.html">Weather</a></li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="finance.html">Finance</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <div class="container">
+                <div class="row d_flex">
+                    <div class="col-md-12">
+                        <p>© 2024 All Rights Reserved. Design by BalletCoders</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <script src="finance.js"></script>
+  </body>
+</html>
