@@ -181,12 +181,13 @@
             padding: 15px 0;
         }
 
-        .shopContent .iconCart {
+        .shopContent .icon-cart {
             position: relative;
+            cursor: pointer;
         }
 
-        .shopContent .iconCart span {
-            display: inline;
+        .shopContent .icon-cart span {
+            display: flex;
             width: 30px;
             height: 30px;
             background-color: red;
@@ -211,7 +212,7 @@
         }
 
         .listProducts .item {
-            background-color: #b9cf1057;
+            background-color: #e6f0a0bb;
             padding: 20px;
             border-radius: 20px;
         }
@@ -222,10 +223,9 @@
         }
 
         .listProducts .item .price {
-            font-weight: 800;
-            font-size: large;
+            font-weight: 750;
+            font-size: medium;
             letter-spacing: 7px;
-            font-size: small;
         }
 
         .listProducts .item button {
@@ -253,16 +253,12 @@
             transition: .5s;
         }
 
-        .showCart .cartTab {
+        body.showCart .cartTab {
             inset: 70px 0 0 auto;
         }
 
-        .showCart .container {
-            transform: translate(410px);
-        }
-
-        .showCart .container {
-            transform: translate(-20px);
+        .body.showCart .container {
+            transform: translateX(-410px);
         }
 
         .cartTab h2 {
@@ -277,7 +273,7 @@
         }
 
         .cartTab .btn button {
-            background-color: #b9cf10;
+            background-color: #e6f0a0bb;
             border: none;
             font-weight: 500;
             cursor: pointer;
@@ -330,7 +326,7 @@
     </style>
 </head>
 
-<body>
+<body class="">
     <header class="header-area">
         <div class="container-fluid">
             <div class="row d_flex">
@@ -374,11 +370,10 @@
     <!-- header section ends -->
 
     <!-- shop section starts -->
-    <div class="showCart">
         <div class="container">
             <header class="shopContent">
                 <div class="title">Fertilizers</div>
-                <div class="iconCart">
+                <div class="icon-cart">
                     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
@@ -425,15 +420,18 @@
                 <button class="checkOutBtn">CHECKOUT</button>
             </div>
         </div>
-    </div>
-
+        <!--Cart section ends-->
 
     <script>
-        let iconCart = document.querySelector('.iconCart');
+        let iconCart = document.querySelector('.icon-cart');
         let closeCart = document.querySelector('.closeBtn');
-        let showCart = document.querySelector('.showCart');
+        let body = document.querySelector('body');
+
         iconCart.addEventListener('click', () => {
-            showCart.classList.toggle('showCart');
+            body.classList.toggle('showCart');
+        });
+        closeCart.addEventListener('click', () => {
+            body.classList.toggle('showCart');
         });
     </script>
 </body>
