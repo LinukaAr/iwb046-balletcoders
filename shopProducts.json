@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Tea",
+        "detail1": "Mixture: TU-709",
+        "detail2": "Weight: 10kg",
+        "price": 1000,
+        "image": "images/TeaFertilizer.png"
+    },
+    {
+        "id": 2,
+        "name": "Product 2",
+        "detail1": "This is a product 2",
+        "detail2": "This is a product 2",
+        "price": 200,
+        "image": "product2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Product 3",
+        "detail1": "This is a product 3",
+        "detail2": "This is a product 3",
+        "price": 300,
+        "image": "product3.jpg"
+    }
+]
