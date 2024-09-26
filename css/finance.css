@@ -16,18 +16,12 @@ body {
 }
 
 header {
-  background-image: url("agriculture-bg.jpg");
-  background-size: cover;
-  background-position: center;
   height: 100vh;
   position: relative;
 }
 
 .overlay {
-  background-image: url("/images/banner.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: rgba(11, 68, 6, 0.557);
   position: absolute;
   top: 0;
   left: 0;
@@ -158,4 +152,48 @@ footer {
   max-width: 100%;
   height: auto;
   border-radius: 30px;
+}
+
+/* Floating Button */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #c0dadc; /* Green color for the button */
+  padding: 15px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  width: 70px; /* Adjust button size to fit the icon */
+  height: 70px;
+}
+
+/* Style for the Calculator Icon Image */
+.calculator-icon {
+  width: 40px; /* Adjust the size of the icon */
+  height: 40px;
+}
+
+/* Hover Animation */
+.floating-btn:hover {
+  background-color: #007d43; /* Darker green on hover */
+  transform: translateY(-5px) scale(1.1); /* Slight lift and enlarge */
+}
+
+/* Animation on page load */
+@keyframes floating-btn-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.floating-btn {
+  animation: floating-btn-bounce 2s infinite ease-in-out;
 }
