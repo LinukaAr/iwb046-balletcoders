@@ -443,18 +443,23 @@ button {
     color: #fff;
 }
 
-
-
 ul.email li {
      display: inline-block;
      padding-right: 30px;
 }
+
+ul.email li #menu-icon {
+    font-size: 24px;
+    z-index: 100001;
+    cursor: pointer;
+    display: none;
+}
+
 ul.email li:last-child {padding-right: 0;}
 
 ul.email li i {
      color: #1a1b1b;
      font-size: 19px;
-     ;
      padding-left: 10px;
 }
 
