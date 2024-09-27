@@ -53,27 +53,46 @@ $(function () {
     interval: 5000
   });
 
-   /* Search
-  -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+  /* Search
+ -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
 
   const searchIcon = document.getElementById('search-icon'),
-        searchClose = document.getElementById('search-close'),
-        searchContent = document.getElementById('search-content');
+    searchClose = document.getElementById('search-close'),
+    searchContent = document.getElementById('search-content');
 
   /* Search show */
-  if(searchIcon){
-      searchIcon.addEventListener('click', () =>{
-          searchContent.classList.add('show-search');
-      });
+  if (searchIcon) {
+    searchIcon.addEventListener('click', () => {
+      searchContent.classList.add('show-search');
+    });
   }
 
   /* Search hidden */
-  if(searchClose){
-      searchClose.addEventListener('click', () =>{
-          searchContent.classList.remove('show-search');
-      });
+  if (searchClose) {
+    searchClose.addEventListener('click', () => {
+      searchContent.classList.remove('show-search');
+    });
   }
 
+  /*navbar*/
+
+  let navbar = document.querySelector('.site-navbar');
+
+  document.querySelector('#menu-icon').onclick = () => {
+    navbar.classList.toggle('active');
+    search.classList.remove('active');
+  }
+
+  window.onscroll = () => {
+    navbar.classList.remove('active');
+    search.classList.remove('active');
+  }
+
+  let header = document.querySelector('.email');
+
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('shadow', window.scrollY > 0);
+  });
 
 });
 
