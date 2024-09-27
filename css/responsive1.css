@@ -173,5 +173,146 @@ File Name: responsive.css
     }
 }
 
-@media (max-width: 360px){}
+@media (max-width: 360px){
+    ul.email li #menu-icon {
+        display: inline;
+        color: black;
+    }
+
+    .container-fluid{
+        display: grid;
+        padding-left: 0;
+    }
+
+    .header-area{
+        line-height: 40px;
+    }
+
+    .logo{
+        width: 50%;
+    }
+    /* navbar css for mobile start */
+    .navbar-area {
+        margin-top: -67px;
+    }
+
+    .site-navbar ul {
+        position: absolute;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        max-height: 0;
+        overflow: hidden;
+        transition: .3s;
+        z-index: 99999;
+     
+    }
+
+    .site-navbar ul.open {
+        max-height: 100vh;
+        padding-bottom: 25px;
+        overflow: visible;
+        color: #6b7908;
+    }
+
+    .titlepage h2{
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .about .titlepage p {
+        text-align: center;
+        margin-bottom: 2px;
+    }
+
+    .about_img figure img{
+        width: 50%;
+    }
+
+    .services {
+        padding-top: 40px;
+    }
+
+    .services .titlepage {
+        padding-bottom: 0;
+    }
+
+    .services_box{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .services_box h3{
+        text-align: center;
+    }
+
+    p{
+        text-align: center;
+    }
+
+    .veget{
+        padding: 25px;
+    }
+
+    .titlepage{
+        padding-bottom: 30px;
+    }
+
+    .point span {
+        padding-top: 18px;
+    }
+
+    .news{
+        padding-top: 40px;
+    }
+
+    .news .titlepage {
+        padding-bottom: 0;
+    }
+
+    .latest{
+        margin-top: 20px;
+    }
+
+    .customers{
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    .customers .titlepage{
+        padding-bottom: 0;
+    }
+
+    .custom{
+        padding: 10px;
+    }
+   
+    .clint{
+        font-size: 10px;
+    }
+
+    .hedingh3 h3{
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+
+    .footer{
+        margin-top: 20px;
+    }
+
+    ul.top_infomation li{
+        padding-bottom: 0;
+    }
+
+    .copyright p{
+        font-size: 11px;
+    }
+
+    .copyright{
+        padding-bottom: 10px;
+    }
+
+
+}
 

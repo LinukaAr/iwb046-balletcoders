@@ -75,17 +75,15 @@ $(function () {
   }
 
   /*navbar*/
+  let navbar = document.querySelector('.site-navbar ul');
+  let menuIcon = document.querySelector('#menu-icon');
 
-  let navbar = document.querySelector('.site-navbar');
-
-  document.querySelector('#menu-icon').onclick = () => {
-    navbar.classList.toggle('active');
-    search.classList.remove('active');
+  menuIcon.onclick = () => {
+    navbar.classList.toggle('open');
   }
 
   window.onscroll = () => {
-    navbar.classList.remove('active');
-    search.classList.remove('active');
+    navbar.classList.remove('open');
   }
 
   let header = document.querySelector('.email');
