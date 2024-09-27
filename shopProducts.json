@@ -9,18 +9,66 @@
     },
     {
         "id": 2,
-        "name": "Product 2",
-        "detail1": "This is a product 2",
-        "detail2": "This is a product 2",
-        "price": 200,
-        "image": "product2.jpg"
+        "name": "Tea",
+        "detail1": "Mixture: T-709",
+        "detail2": "Weight: 10kg",
+        "price": 1200,
+        "image": "images/TeaFertilizer.png"
     },
     {
         "id": 3,
-        "name": "Product 3",
-        "detail1": "This is a product 3",
-        "detail2": "This is a product 3",
+        "name": "Coconut",
+        "detail1": "Zone: APM-W (Wet Zone)",
+        "detail2": "Weight: 5kg",
+        "price": 500,
+        "image": "images/CoconutFertilizer.png"
+    },
+    {
+        "id": 4,
+        "name": "Coconut",
+        "detail1": "Zone: APM-D (Dry Zone)",
+        "detail2": "Weight: 5kg",
+        "price": 500,
+        "image": "images/CoconutFertilizer.png"
+    },
+    {
+        "id": 5,
+        "name": "Paddy",
+        "detail1": "Stage: Basal",
+        "detail2": "Weight: 15kg",
+        "price": 2500,
+        "image": "images/PaddyFertilizer.png"
+    },
+    {
+        "id": 6,
+        "name": "Paddy",
+        "detail1": "Stage: TDM",
+        "detail2": "Weight: 15kg",
+        "price": 3000,
+        "image": "images/PaddyFertilizer.png"
+    },
+    {
+        "id": 7,
+        "name": "Cinnamon",
+        "detail1": "Type: Cinnamomum-U",
+        "detail2": "Weight: 5kg",
+        "price": 700,
+        "image": "images/CinnamonFertilizer.png"
+    },
+    {
+        "id": 8,
+        "name": "Vegetable",
+        "detail1": "Stage: Basal",
+        "detail2": "Weight: 20kg",
+        "price": 8000,
+        "image": "images/VegetablesFertilizer.png"
+    },
+    {
+        "id": 9,
+        "name": "Chilli",
+        "detail1": "Type: Chilli-SP",
+        "detail2": "Weight: 2kg",
         "price": 300,
-        "image": "product3.jpg"
+        "image": "images/ChilliFertilizer.png"
     }
 ]
