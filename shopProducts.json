@@ -18,7 +18,7 @@
     {
         "id": 3,
         "name": "Coconut",
-        "detail1": "Zone: APM-W (Wet Zone)",
+        "detail1": "Zone: Wet Zone",
         "detail2": "Weight: 5kg",
         "price": 500,
         "image": "images/CoconutFertilizer.png"
@@ -26,7 +26,7 @@
     {
         "id": 4,
         "name": "Coconut",
-        "detail1": "Zone: APM-D (Dry Zone)",
+        "detail1": "Zone: Dry Zone",
         "detail2": "Weight: 5kg",
         "price": 500,
         "image": "images/CoconutFertilizer.png"
@@ -50,7 +50,7 @@
     {
         "id": 7,
         "name": "Cinnamon",
-        "detail1": "Type: Cinnamomum-U",
+        "detail1": "Type: Cinnamon-U",
         "detail2": "Weight: 5kg",
         "price": 700,
         "image": "images/CinnamonFertilizer.png"
