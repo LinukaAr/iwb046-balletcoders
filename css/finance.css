@@ -52,8 +52,11 @@ nav .right-icons li {
 }
 
 nav ul li a {
-  color: #fff;
+  color: #000000;
   text-decoration: none;
+  color: #1c1c1b;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 .hero-content {
@@ -219,7 +222,7 @@ footer {
   }
 
   nav ul li a {
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 10px;
     display: block;
   }
