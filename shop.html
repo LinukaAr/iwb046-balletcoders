@@ -181,12 +181,12 @@
             padding: 15px 0;
         }
 
-        .shopContent .icon-cart {
+        .icon-cart {
             position: relative;
-            cursor: pointer;
+            /*cursor: pointer;*/
         }
 
-        .shopContent .icon-cart span {
+        .icon-cart span {
             display: flex;
             width: 30px;
             height: 30px;
@@ -201,7 +201,7 @@
         }
 
         .listProduct .item img {
-            width: 100%;
+            width: 90%;
             filter: drop-shadow(0 0 0.75rem #0009);
         }
 
@@ -212,7 +212,7 @@
         }
 
         .listProduct .item {
-            background-color: #e6f0a0bb;
+            background-color: #edf7acbb;
             padding: 20px;
             border-radius: 20px;
         }
@@ -225,7 +225,7 @@
         .listProduct .item .price {
             font-weight: 750;
             font-size: medium;
-            letter-spacing: 7px;
+            letter-spacing: 6px;
         }
 
         .listProduct .item button {
@@ -235,7 +235,7 @@
             border-radius: 20px;
             margin-top: 10px;
             border: none;
-            cursor: pointer;
+            /*cursor: pointer;*/
         }
 
         /* shop section ends */
@@ -261,7 +261,7 @@
             transform: translateX(-410px);
         }
 
-        .cartTab h2 {
+        .cartTab h3 {
             padding: 20px;
             margin: 0;
             font-weight: 300;
@@ -272,22 +272,22 @@
             grid-template-columns: repeat(2, 1fr);
         }
 
-        .cartTab .btn button {
+        .cartTab button {
             background-color: #e6f0a0bb;
             border: none;
             font-weight: 500;
             cursor: pointer;
         }
 
-        .cartTab .btn .closeBtn {
+        .cartTab .closeBtn {
             background-color: #eeeeeee7;
         }
 
-        .cartTab .listCart .cartItem img {
+        .listCart .item img {
             width: 90%;
         }
 
-        .cartTab .listCart .cartItem {
+        .listCart .item {
             display: grid;
             grid-template-columns: 70px 150px 65px 1fr;
             gap: 10px;
@@ -295,7 +295,7 @@
             align-items: center;
         }
 
-        .listCart .cartItemQty span {
+        .listCart .quantity span {
             display: inline-block;
             width: 25px;
             height: 25px;
@@ -305,9 +305,10 @@
             cursor: pointer;
         }
 
-        .listCart .cartItemQty span:nth-child(2) {
+        .listCart .quantity span:nth-child(2) {
             background-color: transparent;
             color: #eee;
+            cursor: auto;
         }
 
         .listCart .item:nth-child(even) {
@@ -320,6 +321,19 @@
 
         .listCart::-webkit-scrollbar {
             width: 0;
+        }
+        
+        @media screen and (max-width: 992px){
+            .listProduct{
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* mobile responsive */
+        @media only screen and (max-width: 768px){
+            .listProduct{
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         /*Cart section ends*/
@@ -372,7 +386,7 @@
     <!-- shop section starts -->
     <div class="container">
         <header class="shopContent">
-            <div class="title">Fertilizers</div>
+            <div class="title"><h3>Fertilizers</h3></div>
             <div class="icon-cart">
                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -396,7 +410,7 @@
 
     <!--Cart section starts-->
     <div class="cartTab">
-        <h2>Shopping Cart</h2>
+        <h3>Shopping Cart</h3>
         <div class="listCart">
             <!--
             <div class="cartItem">
@@ -429,7 +443,7 @@
         let body = document.querySelector('body');
         let listProductHTML = document.querySelector('.listProduct');
         let listCartHTML = document.querySelector('.listCart');
-        let iconCartSpan = document.querySelector('icon-cart span');
+        let iconCartSpan = document.querySelector('.icon-cart span');
 
         let listProducts = [];
         let carts = [];
@@ -485,14 +499,22 @@
                 carts[positionThisProductInCart].quantity = carts[positionThisProductInCart].quantity + 1;
             }
             addCartToHTML();
+            addCartToMemory();
+        }
+
+        const addCartToMemory = () => {
+            localStorage.setItem('cart', JSON.stringify(carts));
         }
 
         const addCartToHTML = () => {
             listCartHTML.innerHTML = '';
+            let totalQuantity = 0;
             if (carts.lenght > 0) {
                 carts.forEach(cart => {
+                    totalQuantity = totalQuantity + cart.quantity;
                     let newCart = document.createElement('div');
                     newCart.classList.add('item');
+                    newCart.dataset.id = cart.product_id;
                     let positionProduct = listProducts.findIndex((value) => value.id == cart.product_id);
                     let info = listProducts[positionProduct];
                     newCart.innerHTML = `
@@ -503,7 +525,7 @@
                     ${info.name}
                 </div>
                 <div class="cartItemPrice">
-                    Rs.${info.price}
+                    Rs.${info.price * cart.quantity}
                 </div>
                 <div class="cartItemQty">
                     <span class="minus">&lt;</span>
@@ -514,6 +536,41 @@
                     listCartHTML.appendChild(newCart);
                 })
             }
+            iconCartSpan.innerText = totalQuantity;
+        }
+
+        listCartHTML.addEventListener('click', (event) => {
+            let positionClick = event.target;
+            if (positionClick.classList.contains('minus') || positionClick.contains('plus')) {
+                let product_id = positionClick.parentElement.parentElement.id;
+                let type = 'minus';
+                if(positionClick.classList.contains('plus')){
+                    type = 'plus';
+                }
+                changeQuantity(product_id, type);
+            }
+        })
+
+        const changeQuantity = (product_id, type) =>{
+            let positionItemInCart = carts.findIndex((value) => value.product_id == product_id);
+            if(positionItemInCart >= 0){
+                switch (type) {
+                    case 'plus':
+                        carts[positionItemInCart].quantity = carts[positionItemInCart].quantity + 1;
+                        break;
+                
+                    default:
+                        let valueChange = carts[positionItemInCart].quantity - 1;
+                        if(valueChange > 0){
+                            carts[positionItemInCart].quantity = valueChange;
+                        } else{
+                            carts.splice(positionItemInCart, 1);
+                        }
+                        break;
+                }
+            }
+            addCartToMemory();
+            addCartToHTML();
         }
 
         const initApp = () => {
@@ -523,6 +580,12 @@
                 .then(data => {
                     listProducts = data;
                     addDataToHTML();
+
+                    // get cart from memory
+                    if(localStorage.getItem('cart')){
+                        cart = JSON.parse(localStorage.getItem('cart'));
+                        addCartToHTML();
+                    }
                 })
                 .catch(error => console.error('Error fetching the products:', error));
         }
