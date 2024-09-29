@@ -56,6 +56,15 @@ nav ul li a {
 .navbar {
   padding: 1rem;
 }
+
+.nav-link {
+  color: #000000;
+  font-size: 17px;
+  font-weight: bold;
+  display: block;
+  text-decoration: none;
+}
+
 .logo a {
   font-size: 1.5rem;
   font-weight: bold;
