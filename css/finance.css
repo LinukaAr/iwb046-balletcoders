@@ -15,6 +15,12 @@ body {
   padding: 0 20px;
 }
 
+/*-- header --*/
+
+.header-area1 {
+  border-top: #6b7908 solid 15px;
+}
+
 header {
   height: 100vh;
   position: relative;
@@ -42,27 +48,35 @@ nav ul {
   gap: 10px;
 }
 
-nav .right-icons {
-  display: flex;
-  align-items: center;
-}
-
-nav .right-icons li {
-  margin-left: 15px; /* Space between icons */
-}
-
 nav ul li a {
   color: #000000;
   text-decoration: none;
-  color: #1c1c1b;
-  font-size: 17px;
+}
+
+.navbar {
+  padding: 1rem;
+}
+.logo a {
+  font-size: 1.5rem;
   font-weight: bold;
+  text-decoration: none;
+}
+.logo span {
+  color: #28a745;
+}
+.right-icons {
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+}
+.right-icons li {
+  display: inline;
 }
 
 .hero-content {
   text-align: center;
   color: #fff;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -76,6 +90,10 @@ nav ul li a {
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
 }
 
 .btn {
@@ -194,44 +212,4 @@ footer {
 
 .floating-btn {
   animation: floating-btn-bounce 2s infinite ease-in-out;
-}
-
-/* Mobile Responsive Styles */
-.navbar-toggler {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-  background: none;
-  border: none;
-}
-
-@media (max-width: 768px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background-color: #333; /* Add background for mobile menu */
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    text-align: right;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  nav ul li a {
-    color: rgb(255, 255, 255);
-    padding: 10px;
-    display: block;
-  }
-
-  .navbar-toggler {
-    display: block;
-  }
-
-  .show-nav {
-    display: flex !important;
-  }
 }

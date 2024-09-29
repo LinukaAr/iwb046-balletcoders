@@ -34,3 +34,22 @@ function toggleMenu() {
   const nav = document.querySelector("nav ul");
   nav.classList.toggle("show-nav");
 }
+
+// Custom Script to Hide/Show Hero Content
+const navbarToggler = document.querySelector(".navbar-toggler");
+const heroContent = document.getElementById("heroContent");
+const navbarNav = document.getElementById("navbarNav");
+
+navbarToggler.addEventListener("click", function () {
+  // Check if the navbar is expanded or collapsed
+  if (navbarNav.classList.contains("show")) {
+    heroContent.classList.remove("hidden");
+  } else {
+    heroContent.classList.add("hidden");
+  }
+});
+
+// Also hide the hero content when clicking outside or collapsing the navbar
+navbarNav.addEventListener("hidden.bs.collapse", function () {
+  heroContent.classList.remove("hidden");
+});
