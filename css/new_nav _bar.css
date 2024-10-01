@@ -1,0 +1,267 @@
+/*--------------------------------------------------------------------- 
+import Fonts -
+--------------------------------------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900&display=swap");
+
+/*****---------------------------------------- 1) 
+ 2) font-family: 'Poppins', sans-serif;
+ ----------------------------------------*****/
+
+/*--------------------------------------------------------------------- 
+import Files 
+---------------------------------------------------------------------*/
+
+@import url(normalize.css);
+@import url(icomoon.css);
+@import url(font-awesome.min.css);
+@import url(nice-select.css);
+
+/*--------------------------------------------------------------------- 
+basic 
+---------------------------------------------------------------------*/
+
+/*-- header --*/
+
+.header-area1 {
+  border-top: #6b7908 solid 15px;
+}
+
+a {
+  color: #1f1f1f;
+  text-decoration: none !important;
+  outline: none !important;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+ul,
+li,
+ol {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.text_align_left {
+  text-align: left;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+nav ul li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.navbar {
+  padding: 1rem;
+}
+
+.nav-link {
+  color: #000000;
+  font-size: 17px;
+  font-weight: bold;
+  display: block;
+  text-decoration: none;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.logo span {
+  color: #28a745;
+}
+.right-icons {
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+}
+.right-icons li {
+  display: inline;
+}
+
+/** footer **/
+
+.footer {
+  margin-top: 50px;
+  padding-top: 10px;
+  background: #6b7908;
+  text-align: center;
+}
+
+.hedingh3 {
+  padding-top: 20px;
+}
+.hedingh3 h3 {
+  color: #fff;
+  font-size: 24px;
+  padding-bottom: 20px;
+  line-height: 23px;
+  font-weight: 500;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.hedingh3 p {
+  color: #fff;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+ul.menu_footer {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+ul.menu_footer li a {
+  color: #fff;
+  font-size: 17px;
+  line-height: 18px;
+  padding-bottom: 10px;
+  display: block;
+}
+
+ul.menu_footer li a:hover {
+  color: black;
+}
+
+.flot_right {
+  float: right;
+}
+
+ul.top_infomation li {
+  padding-bottom: 8px;
+  display: block;
+  font-size: 16px;
+  color: #fff;
+}
+
+ul.top_infomation li i {
+  margin-right: 0;
+  color: #fff;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background: #6b7908;
+  line-height: 30px;
+  font-size: 15px;
+}
+
+ul.top_infomation li a {
+  color: #fff;
+}
+
+ul.top_infomation li a:hover {
+  color: black;
+}
+
+.copyright {
+  padding-bottom: 25px;
+  background: #6b7908;
+}
+
+ul.social_icon {
+  text-align: left;
+}
+
+ul.social_icon li a i {
+  font-size: 17px;
+  color: #fff;
+  transition: ease-in all 0.5s;
+  border-radius: 50px;
+}
+
+ul.social_icon li a i:hover {
+  color: #111111;
+  transition: ease-in all 0.5s;
+}
+
+.copyright p {
+  color: #fff;
+  font-size: 17px;
+  line-height: 22px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.copyright a {
+  color: #fff;
+}
+
+.copyright a:hover {
+  color: #111111;
+}
+
+/** end footer **/
+
+/*=============== SEARCH ===============*/
+.search {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: hsla(230, 12%, 96%, 0.6);
+  backdrop-filter: blur(16px);
+  padding: 8rem 1.5rem;
+  transition: top 0.4s;
+}
+
+.search__form {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  background-color: whitesmoke;
+  border: 2px solid #6b7908;
+  border-radius: 1rem;
+}
+
+.fa-search {
+  padding-left: 0.5rem;
+  font-size: 1.25rem;
+  color: #6b7908;
+}
+
+.search__input {
+  width: 100%;
+  padding-block: 0.5rem;
+  background-color: whitesmoke;
+  color: #6b7908;
+  border: 2px solid whitesmoke;
+  border-radius: 1rem;
+}
+
+.fa-times {
+  position: absolute;
+  top: 5.5rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: v#6b7908;
+  cursor: pointer;
+}
+
+/* Show search */
+.show-search {
+  top: 0;
+}
