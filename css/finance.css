@@ -17,10 +17,6 @@ body {
 
 /*-- header --*/
 
-.header-area1 {
-  border-top: #6b7908 solid 15px;
-}
-
 header {
   height: 100vh;
   position: relative;
@@ -33,53 +29,6 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 10px;
-}
-
-nav ul li a {
-  color: #000000;
-  text-decoration: none;
-}
-
-.navbar {
-  padding: 1rem;
-}
-
-.nav-link {
-  color: #000000;
-  font-size: 17px;
-  font-weight: bold;
-  display: block;
-  text-decoration: none;
-}
-
-.logo a {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-decoration: none;
-}
-.logo span {
-  color: #28a745;
-}
-.right-icons {
-  list-style-type: none;
-  display: flex;
-  gap: 15px;
-}
-.right-icons li {
-  display: inline;
 }
 
 .hero-content {

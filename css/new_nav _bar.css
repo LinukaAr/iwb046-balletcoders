@@ -75,11 +75,15 @@ nav ul li a {
 }
 
 .nav-link {
-  color: #000000;
-  font-size: 17px;
-  font-weight: bold;
-  display: block;
+  color: black !important; /* Default black color */
+  font-size: 17px !important;
+  font-weight: bold !important;
   text-decoration: none;
+  transition: color 0.3s ease !important; /* Smooth transition for color change */
+}
+
+.nav-link:hover {
+  color: green !important; /* Change to green on hover */
 }
 
 .logo a {
