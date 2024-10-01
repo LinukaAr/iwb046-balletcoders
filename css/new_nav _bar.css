@@ -185,7 +185,7 @@ ul.top_infomation li a:hover {
 }
 
 ul.social_icon {
-  text-align: left;
+  text-align: left !important;
 }
 
 ul.social_icon li a i {
