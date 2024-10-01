@@ -1,20 +1,11 @@
 import ballerina/http;
 import ballerina/log;
 
-//login
-// import ballerina/sql;
-// import ballerinax/mysql;
-// import ballerina/crypto;
-// import ballerina/jwt;
-
-
-
-
 service / on new http:Listener(8081) {
     
     // Endpoint for fetching weather data
     resource function get weather/[string location](http:Caller caller, http:Request req) returns error? {
-        string apiKey = "4a758dd1aed04dc3950175920231609";
+        string apiKey = "";
         string baseUrl = "http://api.weatherapi.com/v1/";
 
         // Initialize the HTTP client with the base URL
@@ -43,7 +34,7 @@ service / on new http:Listener(8081) {
 
     // Endpoint for fetching weather forcast data
     resource function get weatherForecast/[string location](http:Caller caller, http:Request req) returns error? {
-    string apiKey = "4a758dd1aed04dc3950175920231609";
+    string apiKey = "";
     string baseUrl = "http://api.weatherapi.com/v1/";
     
     // Define the path for the forecast API request
@@ -70,7 +61,7 @@ service / on new http:Listener(8081) {
     
    // Endpoint for fetching news data
     resource function get news(http:Caller caller, http:Request req) returns error? {
-        string newsApiKey = "076e0ceaa2914eacb2d1cff055da7f32"; 
+        string newsApiKey = ""; 
         string baseUrl = "https://newsapi.org/v2/";
 
         // Define the query parameters
