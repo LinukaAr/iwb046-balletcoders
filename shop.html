@@ -170,8 +170,47 @@
         }
 
         /* end header */
+
+        /* shop section starts */
+        .shop-body {
+           padding-top: 100px; 
+        }
+
+        .container {
+            width: 1000px;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .shop-header {
+            display: grid;
+            grid-template-columns: 1fr 50px;
+            margin-top: 50px;
+        }
+
+        .shop-header .shopping{
+            position: relative;
+            text-align: right;
+        }
+
+        .shop-header .shopping img{
+            width: 40px;
+        }
+
+        .shop-header .shopping span{
+            background-color: red;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            top: -5px;
+            left: 80%;
+            padding: 3px 10px;
+        }
     </style>
 </head>
+
 <body>
     <header class="header-area">
         <div class="container-fluid">
@@ -213,15 +252,31 @@
             </div>
         </div>
     </header>
-    <!-- header section ends --> 
+    <!-- header section ends -->
 
     <!-- shop section starts -->
 
-    <div class="container">
-        <h1>Fertilizers</h1>
-        <img src="images/shopping.svg">
-        <span class="quantity">0</span>
+    <div class="shop-body">
+        <div class="container">
+            <header class="shop-header">
+                <h1>Fertilizers</h1>
+                <div class="shopping">
+                    <img src="images/shopping.svg">
+                    <span class="quantity">0</span>
+                </div>
+            </header>
+            <div class="list"></div>
+        </div>
+        <div class="card">
+            <h1>Card</h1>
+            <ul class="listCard"></ul>
+            <div class="checkOut">
+                <div class="total">0</div>
+                <div class="closeShopping">Close</div>
+            </div>
+        </div>
     </div>
+
 
     <script src="shop.js"></script>
 </body>
