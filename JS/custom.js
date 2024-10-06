@@ -95,3 +95,53 @@ $(function () {
 });
 
 
+//-------------------------------------------fetchNewsData--------------------------------------
+function fetchNewsData() {
+  $.ajax({
+    url: "http://localhost:8081/AgriNews", 
+    method: "GET",
+    success: (data) => {
+      // Check if data.articles exists and is an array
+      if (!data.articles || !Array.isArray(data.articles)) {
+        console.error("Invalid news data:", data);
+        alert("Invalid news data received.");
+        return;
+      }
+
+      // Loop through the first 3 articles and update the UI
+      data.articles.forEach((article, index) => {
+        if (index < 3) { // Assuming you're displaying the top 3 articles
+          // Update the image
+          $(`#imgN${index + 1}`).attr("src", article.urlToImage);
+
+          // Update the article link
+          $(`#a${index + 1}`).attr("href", article.url);
+
+          // Update the title
+          $(`#title${index + 1}`).text(article.title);
+
+          // Update the description
+          $(`#p${index + 1}`).text(article.description);
+
+          // Update the published time
+          const publishedDate = new Date(article.publishedAt);
+          const formattedDate = publishedDate.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
+          });
+          $(`#ptime${index + 1}`).text(`Last updated on ${formattedDate}`);
+        }
+      });
+    },
+    error: (xhr, status, error) => {
+      console.error("Error fetching news:", error);
+      alert("Failed to fetch news data.");
+    }
+  });
+}
+
+// Call the function when the document is ready
+$(document).ready(function() {
+  fetchNewsData();
+});

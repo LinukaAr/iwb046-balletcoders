@@ -92,7 +92,7 @@ function fetchWeatherData(location) {
 //-------------------------------------------fetchNewsData--------------------------------------
 function fetchNewsData() {
   $.ajax({
-    url: "http://localhost:8081/news", // Adjust the URL to match your backend endpoint
+    url: "http://localhost:8081/WeatherNews", 
     method: "GET",
     success: (data) => {
       // Check if data.articles exists and is an array

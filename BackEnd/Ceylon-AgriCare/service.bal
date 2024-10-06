@@ -1,182 +1,89 @@
 import ballerina/http;
 import ballerina/log;
-import ballerinax/mongodb;
-import ballerina/uuid;
 
-configurable string host = "mongodb://localhost:27017";
-// configurable string host = "localhost";
-configurable int port = 27017;
+service / on new http:Listener(8081) {
+    
+    // Endpoint for fetching weather data
+    resource function get weather/[string location](http:Caller caller, http:Request req) returns error? {
+        string apiKey = "";
+        string baseUrl = "http://api.weatherapi.com/v1/";
 
-configurable string username = "linukaarambawela";
-configurable string password = "P4sYcUebZ9rlcv";
-configurable string database = "agricare";
+        // Initialize the HTTP client with the base URL
+        http:Client weatherClient = check new(baseUrl);
 
+        // Define the path for the API request, including the query parameters
+        string path = string `current.json?key=${apiKey}&q=${location}`;
 
-final mongodb:Client mongoDb = check new ({
-    connection: {
-        serverAddress: {
-            host,
-            port
-        },
-        auth: <mongodb:ScramSha256AuthCredential>{
-            username,
-            password,
-            database
+        // Make the GET request and explicitly specify the return type as `http:Response`
+        http:Response|error weatherResponse = weatherClient->get(path);
+
+        if (weatherResponse is http:Response) {
+            json weatherData = check weatherResponse.getJsonPayload();
+            http:Response res = new;
+            res.setPayload(weatherData);
+            res.setHeader("Access-Control-Allow-Origin", "*");
+            check caller->respond(res);
+        } else {
+            log:printError("Error in Weather API call", 'error = weatherResponse);
+            http:Response res = new;
+            res.setPayload("Error fetching weather data.");
+            res.setHeader("Access-Control-Allow-Origin", "*");
+            check caller->respond(res);
         }
     }
-});
 
-type User record {
-    string id;
-    string username;
-    string password;
-    string email;
-};
-
-type UserInput record {
-    string username;
-    string password;
-    string email;
-};
-
-type LoginInput record {
-    string username;
-    string password;
-};
-
-service /user on new http:Listener(8081) {
-    private final mongodb:Database db;
-
-    // Initialize the database
-    function init() returns error? {
-        self.db = check mongoDb->getDatabase("user_management");
-    }
-
-    // User registration endpoint
-    resource function post register(http:Caller caller, http:Request req) returns error? {
-        json payload = check req.getJsonPayload();
-        UserInput input = check payload.cloneWithType(UserInput);
-        mongodb:Collection usersCollection = check self.db->getCollection("users");
-        string id = uuid:createType1AsString();
-        User newUser = {
-            id: id,
-            username: input.username,
-            password: input.password,
-            email: input.email
-        };
-        check usersCollection->insertOne(newUser);
+    // Endpoint for fetching weather forcast data
+    resource function get weatherForecast/[string location](http:Caller caller, http:Request req) returns error? {
+    string apiKey = "";
+    string baseUrl = "http://api.weatherapi.com/v1/";
+    
+    // Define the path for the forecast API request
+    string path = string `forecast.json?key=${apiKey}&q=${location}&days=7`;
+    
+    http:Client weatherClient = check new(baseUrl);
+    http:Response|error weatherResponse = weatherClient->get(path);
+    
+    if (weatherResponse is http:Response) {
+        json weatherData = check weatherResponse.getJsonPayload();
         http:Response res = new;
-        res.setPayload("User registered successfully.");
+        res.setPayload(weatherData);
+        res.setHeader("Access-Control-Allow-Origin", "*");
+        check caller->respond(res);
+    } else {
+        log:printError("Error in Weather API call", 'error = weatherResponse);
+        http:Response res = new;
+        res.setPayload("Error fetching weather data.");
+        res.setHeader("Access-Control-Allow-Origin", "*");
         check caller->respond(res);
     }
-
-     // User login endpoint
-    resource function post login(http:Caller caller, http:Request req) returns error? {
-        json payload = check req.getJsonPayload();
-        LoginInput input = check payload.cloneWithType(LoginInput);
-        mongodb:Collection usersCollection = check self.db->getCollection("users");
-        json query = { "username": input.username, "password": input.password };
-
-        var result = usersCollection->find(query);
-        // cannot infer the 'typedesc' argument for parameter 'targetType': expected an argument for the parameter or a contextually-expected type to infer the argument
-        if (result is mongodb:Error) {
-            log:printError("Error finding user", result);
-            check caller->respond({ "status": "error", "message": "Login failed" });
-        } else {
-            json[] users = <json[]>result;//incompatible types: 'never' cannot be cast to 'json[]'(BCE2500)
-            if (users.length() > 0) {
-                check caller->respond({ "status": "success", "message": "Login successful" });
-            } else {
-                check caller->respond({ "status": "error", "message": "Invalid credentials" });
-            }
-        }
-    }
 }
 
-
-// Weather endpoints
-service /weather on new http:Listener(8082) {
     
-    // Endpoint for fetching current weather data
-    resource function get current/[string location](http:Caller caller, http:Request req) returns error? {
-        string apiKey = ""; // Add your weather API key
-        string baseUrl = "http://api.weatherapi.com/v1/";
-        
-        // Define the path for the API request
-        string path = string `current.json?key=${apiKey}&q=${location}`;
-        
-        // Initialize the HTTP client
-        http:Client weatherClient = check new(baseUrl);
-        
-        // Make the GET request
-        http:Response|error weatherResponse = weatherClient->get(path);
-        
-        if (weatherResponse is http:Response) {
-            json weatherData = check weatherResponse.getJsonPayload();
-            http:Response res = new;
-            res.setPayload(weatherData);
-            res.setHeader("Access-Control-Allow-Origin", "*");
-            check caller->respond(res);
-        } else {
-            log:printError("Error in Weather API call", 'error = weatherResponse);
-            http:Response res = new;
-            res.setPayload("Error fetching weather data.");
-            res.setHeader("Access-Control-Allow-Origin", "*");
-            check caller->respond(res);
-        }
-    }
-
-    // Endpoint for fetching weather forecast data
-    resource function get forecast/[string location](http:Caller caller, http:Request req) returns error? {
-        string apiKey = ""; // Add your weather API key
-        string baseUrl = "http://api.weatherapi.com/v1/";
-        
-        // Define the path for the forecast API request
-        string path = string `forecast.json?key=${apiKey}&q=${location}&days=7`;
-        
-        http:Client weatherClient = check new(baseUrl);
-        http:Response|error weatherResponse = weatherClient->get(path);
-        
-        if (weatherResponse is http:Response) {
-            json weatherData = check weatherResponse.getJsonPayload();
-            http:Response res = new;
-            res.setPayload(weatherData);
-            res.setHeader("Access-Control-Allow-Origin", "*");
-            check caller->respond(res);
-        } else {
-            log:printError("Error in Weather API call", 'error = weatherResponse);
-            http:Response res = new;
-            res.setPayload("Error fetching weather data.");
-            res.setHeader("Access-Control-Allow-Origin", "*");
-            check caller->respond(res);
-        }
-    }
-}
-
-// News endpoint
-service /news on new http:Listener(8083) {
-    
-    // Endpoint for fetching news data
-    resource function get latest(http:Caller caller, http:Request req) returns error? {
-        string newsApiKey = ""; // Add your news API key
+   // Endpoint for fetching weatheNews data
+    resource function get WeatherNews(http:Caller caller, http:Request req) returns error? {
+        string newsApiKey = ""; 
         string baseUrl = "https://newsapi.org/v2/";
-        
+
         // Define the query parameters
         string path = string `everything?q=weather&apiKey=${newsApiKey}`;
-        
-        // Create a news API client
-        http:Client newsClient = check new(baseUrl);
-        
+
+        // Create a news API client using the base URL
+        http:Client newsClient = check new (baseUrl);
+
         // Make the GET request to the news API
         http:Response|error newsResponse = newsClient->get(path);
-        
+
         if (newsResponse is http:Response) {
+            // Fetch JSON data from the API response
             json newsData = check newsResponse.getJsonPayload();
+
+            // Respond with the fetched news data
             http:Response res = new;
             res.setPayload(newsData);
             res.setHeader("Access-Control-Allow-Origin", "*");
             check caller->respond(res);
         } else {
+            // Log error in API call and respond with a failure message
             log:printError("Error in News API call", 'error = newsResponse);
             http:Response res = new;
             res.setPayload("Error fetching news data.");
@@ -184,5 +91,39 @@ service /news on new http:Listener(8083) {
             check caller->respond(res);
         }
     }
+
+    // Endpoint for fetching AgriNews data
+    resource function get AgriNews(http:Caller caller, http:Request req) returns error? {
+        string newsApiKey = ""; 
+        string baseUrl = "https://newsapi.org/v2/";
+
+        // Define the query parameters
+        string path = string `everything?q=agriculture&apiKey=${newsApiKey}`;
+
+        // Create a news API client using the base URL
+        http:Client newsClient = check new (baseUrl);
+
+        // Make the GET request to the news API
+        http:Response|error newsResponse = newsClient->get(path);
+
+        if (newsResponse is http:Response) {
+            // Fetch JSON data from the API response
+            json newsData = check newsResponse.getJsonPayload();
+
+            // Respond with the fetched news data
+            http:Response res = new;
+            res.setPayload(newsData);
+            res.setHeader("Access-Control-Allow-Origin", "*");
+            check caller->respond(res);
+        } else {
+            // Log error in API call and respond with a failure message
+            log:printError("Error in News API call", 'error = newsResponse);
+            http:Response res = new;
+            res.setPayload("Error fetching news data.");
+            res.setHeader("Access-Control-Allow-Origin", "*");
+            check caller->respond(res);
+        }
+    }
+
 }
 
