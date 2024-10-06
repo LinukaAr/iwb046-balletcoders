@@ -2,14 +2,52 @@
 File Name: responsive.css 
 ---------------------------------------------------------------------*/
 
-@media (min-width: 1343px) and (max-width: 1500px) {}
+@media (max-width: 1050px){
 
-@media (min-width: 1200px) and (max-width: 1342px) {}
+    .logo a{
+       font-size: 18px;
+    }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+    .site-navbar ul{
+        margin-left: 145px;
+        margin-right: 65px;
+        padding-left: 14px;
+        padding-right: 12px;
+        
+    }
 
+    .site-navbar ul li a{
+        font-size: 14px;
+    }
+    
     .site-navbar ul li {
-        padding-right: 37px;
+        padding-right: 25px;
+    }
+
+    #banner1 .carousel-control-prev {
+        width: 50px;
+        height: 50px;
+    }
+
+    #banner1 .carousel-control-next{
+        width: 50px;
+        height: 50px;
+    }
+
+    .fa{
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    #myCarousel .carousel-control-prev{
+        left: 0;
+        font-size: 2rem;
+    }
+
+    #myCarousel .carousel-control-next {
+        right: 0;
+        font-size: 2rem;
+
     }
 
     ul.recent li {
@@ -20,251 +58,147 @@ File Name: responsive.css
         font-size: 39px;
         line-height: 39px;
     }
+
+    ul.top_infomation li{
+        font-size: 12px;
+    }
+
+    ul.menu_footer li a{
+        font-size: 12px;
+    }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 768px){
 
-    .site-navbar ul li {
-        padding-right: 7px;
+    
+    .logo a{
+        font-size: 15px;
     }
 
-    ul.email li {
-
-        padding-right: 11px;
+    ul.email li #menu-icon{
+        font-size: 10px;
     }
 
-    .willom h1 {
-        font-size: 56px;
-        line-height: 70px;
-    }
-
-    .about .titlepage {
-        padding-bottom: 30px;
-        max-width: inherit;
-    }
-
-    .titlepage h2 {
-        font-size: 37px;
-        line-height: 37px;
-    }
-
-    .nostrud h3 {
-        font-size: 20px;
-        line-height: 21px;
-    }
-
-    .point h3 {
-        max-width: 159px;
-        height: 159px;
-    }
-
-    .services_box h3 {
-        font-size: 22px;
-        line-height: 21px;
-    }
-
-    .veget {
-        padding: 30px 15px;
-    }
-
-}
-
-@media (min-width: 576px) and (max-width: 767px) {
-
-    .willom h1 {
-        font-size: 49px;
-        line-height: 60px;
-    }
-
-    #myCarousel .carousel-control-next {
-        right: 1%;
-    }
-
-    #myCarousel .carousel-control-prev {
-        left: 1%;
-    }
-
-    .titlepage h2 {
-        font-size: 46px;
-        line-height: 50px;
-    }
-
-    .about_img {
-        margin-top: 30px;
-    }
-
-    .about .titlepage {
-        max-width: inherit;
-    }
-
-    .d_none {
-        display: none !important;
-    }
-
-    .services_box {
-        max-width: 371px;
-        margin: 0 auto;
-        margin-top: 30px;
-        margin-bottom: 50px;
-    }
-
-    .latest {
-        max-width: 370px;
-        margin: 0 auto;
-        margin-bottom: 55px;
-    }
-
-    .flot_right {
-        float: inherit;
-    }
-
-    ul.social_icon {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    #menu-icon #search-icon .fa-user-circle{
-        display: initial;
-    }
-
-    /* navbar css for mobile start */
-
-    .nav-toggler {
-        display: block;
-        position: absolute;
-        right: 15px;
-        z-index: 99999;
-    }
-
-    .site-navbar {
-        min-height: 60px;
-    }
-
-    .site-navbar ul {
-        position: absolute;
-        width: 100%;
-        left: -15px;
-        top: 60px;
-        flex-direction: column;
-        align-items: center;
-        background-color: #fff;
-        max-height: 0;
-        overflow: hidden;
-        transition: .3s;
-        z-index: 99999;
-        box-shadow: 0 0 10px rgb(192, 190, 182);
-    }
-
-    .site-navbar ul li {
-        width: 100%;
-        text-align: left;
-        padding-right: 0;
+    ul.email li i{
+        font-size: 10px;
     }
 
     .site-navbar ul li a {
-        padding: 0px 25px 0px 25px;
-        line-height: 40px;
+        font-size: 10px;
     }
 
-    .site-navbar ul.open {
-        max-height: 100vh;
-        padding-bottom: 25px;
-        overflow: visible;
+    ul.email li{
+        padding-right: 2px;
     }
 
-    /* navbar css for mobile end */
+    .container-fluid{
+        display: flex;
+        margin-left: 0;
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    .email .text_align_right{
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    .about{
+        padding-top: 50px;
+    }
+
+    .about .titlepage{
+        float: left;
+    }
+
+    .titlepage h2{
+        font-size: 30px;
+    }
+
+    .about .titlepage p{
+        font-size: 15px;
+        padding-top: 10px;
+        line-height: 18px;
+    }
+
+    .services{
+        padding-top: 50px; 
+    }
+
+    .services_box h3{
+        font-size: 20px;
+        line-height: 20px;
+        padding-bottom: 10px;
+    }
+
+    p{
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .choose{
+        padding: 50px 0 35px 0;
+    }
+
+    .point h3{
+        height: 150px;
+        max-width: 150px;
+        font-size: 25px;
+    }
+
+    .news {
+        padding-top: 50px;
+    }
+
+    .clint{
+        padding-top: 5px;
+    }
+
+    .customers{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .custom p{
+        line-height: 15px;
+        padding: 15px 0;
+    }
+
+    .flot_right{
+        float: left;
+    }
+
+    .copyright p{
+        font-size: 15px;
+    }
 }
 
-@media (max-width: 575px) {
-
-    .logo {
-        text-align: left;
+@media (max-width: 360px){
+    ul.email li #menu-icon {
+        display: inline;
+        color: black;
     }
 
-    .willom h1 {
-        font-size: 27px;
+    .container-fluid{
+        display: grid;
+        padding-left: 0;
+    }
+
+    .header-area{
         line-height: 40px;
-        padding: 46px 21px;
     }
 
-    #myCarousel .carousel-control-next {
-        right: 1%;
+    .logo{
+        width: 50%;
     }
-
-    #myCarousel .carousel-control-prev {
-        left: 1%;
-    }
-
-    .titlepage h2 {
-        font-size: 37px;
-        line-height: 45px;
-    }
-
-    .about_img {
-        margin-top: 30px;
-    }
-
-    .about .titlepage {
-        max-width: inherit;
-    }
-
-    .custom {
-        padding: 40px 12px;
-    }
-
-    .services_box {
-        max-width: 371px;
-        margin: 0 auto;
-        margin-top: 30px;
-        margin-bottom: 50px;
-    }
-
-    .latest {
-        max-width: 317px;
-        margin: 0 auto;
-
-        margin-top: 30px;
-    }
-
-    .titlepage h2 {
-        line-height: 40px;
-        font-size: 28px;
-    }
-
-    .d_none {
-        display: none !important;
-    }
-
-    .flot_right {
-        float: inherit;
-    }
-
-    ul.social_icon {
-        text-align: center;
-        margin-top: 20px;
-    }
-
     /* navbar css for mobile start */
     .navbar-area {
         margin-top: -67px;
     }
 
-    .nav-toggler {
-        display: block;
-        position: absolute;
-        right: 15px;
-        z-index: 99999;
-    }
-
-    .site-navbar {
-        min-height: 60px;
-    }
-
     .site-navbar ul {
         position: absolute;
         width: 100%;
-        left: 0px;
-        top: 0px;
         flex-direction: column;
         align-items: center;
         background-color: #fff;
@@ -272,23 +206,113 @@ File Name: responsive.css
         overflow: hidden;
         transition: .3s;
         z-index: 99999;
-        box-shadow: 0 0 10px rgb(192, 190, 182);
-    }
-
-    .site-navbar ul li {
-        width: 100%;
-        text-align: left;
-        padding-right: 0;
-    }
-
-    .site-navbar ul li a {
-        padding: 0px 25px 0px 25px;
-        line-height: 40px;
+     
     }
 
     .site-navbar ul.open {
         max-height: 100vh;
         padding-bottom: 25px;
         overflow: visible;
+        color: #6b7908;
     }
+
+    .titlepage h2{
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .about .titlepage p {
+        text-align: center;
+        margin-bottom: 2px;
+    }
+
+    .about_img figure img{
+        width: 50%;
+    }
+
+    .services {
+        padding-top: 40px;
+    }
+
+    .services .titlepage {
+        padding-bottom: 0;
+    }
+
+    .services_box{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .services_box h3{
+        text-align: center;
+    }
+
+    p{
+        text-align: center;
+    }
+
+    .veget{
+        padding: 25px;
+    }
+
+    .titlepage{
+        padding-bottom: 30px;
+    }
+
+    .point span {
+        padding-top: 18px;
+    }
+
+    .news{
+        padding-top: 40px;
+    }
+
+    .news .titlepage {
+        padding-bottom: 0;
+    }
+
+    .latest{
+        margin-top: 20px;
+    }
+
+    .customers{
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    .customers .titlepage{
+        padding-bottom: 0;
+    }
+
+    .custom{
+        padding: 10px;
+    }
+   
+    .clint{
+        font-size: 10px;
+    }
+
+    .hedingh3 h3{
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+
+    .footer{
+        margin-top: 20px;
+    }
+
+    ul.top_infomation li{
+        padding-bottom: 0;
+    }
+
+    .copyright p{
+        font-size: 11px;
+    }
+
+    .copyright{
+        padding-bottom: 10px;
+    }
+
+
 }
+
