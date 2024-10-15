@@ -335,6 +335,89 @@
             width: 90%;
             height: 250px;
         }
+
+        .list .item .title {
+            font-weight: 600;
+            color: #efefef;
+        }
+
+        .list .item .price {
+            margin: 10px;
+            color: #efefef;
+        }
+
+        .list .item button {
+            background-color: #35496f;
+            color: #efefef;
+            font-size: 1rem;
+            font-weight: 600;
+            width: 100%;
+            padding: 10px;
+            border: 3px solid #efefef;
+            border-radius: 8px;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            -ms-border-radius: 8px;
+            -o-border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            -webkit-transition: all 0.25s ease;
+            -moz-transition: all 0.25s ease;
+            -ms-transition: all 0.25s ease;
+            -o-transition: all 0.25s ease;
+        }
+
+        .list .item button:hover {
+            background-color: #430986;
+            color: #efefef;
+        }
+
+
+        /* ---------------------- */
+
+        .listCard li {
+            display: grid;
+            grid-template-columns: 100px repeat(3, 1fr);
+            color: #fff;
+            row-gap: 10px;
+        }
+
+        .listCard li div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .listCard li img {
+            width: 90%;
+        }
+
+        .listCard .count {
+            margin: 0 10px;
+            color: #1c1f25;
+            font-size: 1.2rem;
+        }
+
+        .cardTitle,
+        .cardPrice {
+            color: #1c1f25;
+        }
+
+        .cardButton {
+            width: 28px;
+            height: 28px;
+            color: #efefef;
+            font-size: 1.5rem;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -397,7 +480,9 @@
 
     <div class="card">
         <h1>Card</h1>
-        <ul class="listCard"></ul>
+        <ul class="listCard">
+
+        </ul>
         <div class="checkOut">
             <div class="total">0</div>
             <div class="closeShopping">Close</div>
@@ -405,99 +490,7 @@
     </div>
 
 
-    <script>
-        const openShopping = document.querySelector(".shopping");
-        const shoppingCart = document.querySelector(".closeShopping");
-        const list = document.querySelector(".list");
-        const listCard = document.querySelector(".listCard");
-        const total = document.querySelector(".total");
-        const body = document.querySelector("body");
-        const quantity = document.querySelector(".quantity");
-
-        openShopping.addEventListener("click", () => {
-            body.classList.add("active");
-        })
-        CloseEvent.addEventListener("click", () => {
-            body.classList.remove("active");
-        })
-
-        let products = [
-            {
-                id: 1,
-                name: "Tea",
-                image: "images\TeaFertilizer.png",
-                price: 1000
-            },
-            {
-                id: 2,
-                name: "Tea",
-                images: "images/TeaFertilizer.png",
-                price: 1200
-            },
-            {
-                id: 3,
-                name: "Coconut",
-                images: "images/CoconutFertilizer.png",
-                price: 500
-            },
-            {
-                id: 4,
-                name: "Coconut",
-                images: "images/CoconutFertilizer.png",
-                price: 500
-            },
-            {
-                id: 5,
-                name: "Paddy",
-                images: "images/PaddyFertilizer.png",
-                price: 2500
-            },
-            {
-                id: 6,
-                name: "Paddy",
-                images: "images/PaddyFertilizer.png",
-                price: 3000
-            },
-            {
-                id: 7,
-                name: "Cinnamon",
-                images: "images/CinnamonFertilizer.png",
-                price: 700
-            },
-            {
-                id: 8,
-                name: "Vegetable",
-                images: "images/VegetableFertilizer.png",
-                price: 8000
-            },
-            {
-                id: 9,
-                name: "Chilli",
-                images: "images/ChilliFertilizer.png",
-                price: 300
-            }
-        ]
-
-        let listCards = [];
-
-        const initApp = () => {
-            products.forEach((value, key) => {
-                let newDiv = document.createElement("div");
-                newDiv.classList.add("item");
-                newDiv.innerHTML = `
-        <img src = "img/${value.image}">
-        <div class = "title">${value.name}</div>
-        <div class= "price">${value.price.toLocaleString()}</div>
-        <button onclick = "addToCard(${key})"Add to Card
-        </button>
-        `;
-                list.appendChild(newDiv)
-            })
-        }
-
-        initApp()
-
-    </script>
+    <script src="shop.js"></script>
 </body>
 
 </html>
