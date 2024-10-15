@@ -17,55 +17,55 @@ let products = [
     {
         "id": 1,
         "name": "Tea",
-        "image": "images\TeaFertilizer.png",
+        "image": "images/Shop/1.png",
         "price": 1000
     },
     {
         "id": 2,
         "name": "Tea",
-        "image": "images/TeaFertilizer.png",
+        "image": "images/Shop/1.png",
         "price": 1200
     },
     {
         "id": 3,
         "name": "Coconut",
-        "image": "images/CoconutFertilizer.png",
+        "image": "images/Shop/3.png",
         "price": 500
     },
     {
         "id": 4,
         "name": "Coconut",
-        "image": "images/CoconutFertilizer.png",
+        "image": "images/Shop/3.png",
         "price": 500
     },
     {
         "id": 5,
         "name": "Paddy",
-        "image": "images/PaddyFertilizer.png",
+        "image": "images/Shop/5.png",
         "price": 2500
     },
     {
         "id": 6,
         "name": "Paddy",
-        "image": "images/PaddyFertilizer.png",
+        "image": "images/Shop/5.png",
         "price": 3000
     },
     {
         "id": 7,
         "name": "Cinnamon",
-        "image": "images/CinnamonFertilizer.png",
+        "image": "images/Shop/7.png",
         "price": 700
     },
     {
         "id": 8,
         "name": "Vegetable",
-        "image": "images/VegetableFertilizer.png",
+        "image": "images/Shop/8.png",
         "price": 8000
     },
     {
         "id": 9,
         "name": "Chilli",
-        "image": "images/ChilliFertilizer.png",
+        "image": "images/Shop/9.png",
         "price": 300
     }
 ]
