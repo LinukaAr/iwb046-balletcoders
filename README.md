@@ -3,7 +3,7 @@
 # Ceylon AgriCare
  **Team: BalletCoders**
 
-![GreenHaven](images/home.JPG)
+[![Ceylon Agricare Demo](https://img.youtube.com/vi/oEbNXQ7IdWk/maxresdefault.jpg)](https://youtu.be/oEbNXQ7IdWk)
 
 
 <i>Farmer's Multi-Tool</i>
@@ -25,13 +25,18 @@ Ceylon Agricare is a comprehensive web application designed to assist farmers in
 
 <div align="center">
 
+## Documentation
+You can find the detailed project documentation [here](link-to-your-file.pdf).
+
+<hr>
+
 ### 📛 **Features**
 </div>
 
 - **Shop**: Purchase seeds, fertilizers, tools, and more directly from the app.
 - **Weather Updates**: Get real-time and forecasted weather information to plan farming activities effectively.
-- **Market Prices**: Stay updated on real-time market prices for crops and livestock.
-- **Government Schemes**: Information on government subsidies and schemes available to farmers.
+- **Marketplace**: Stay updated on real-time market prices for crops and livestock.
+- **Loan Schemes**: Information on government subsidies and schemes available to farmers.
 
 This application aims to be a reliable assistant, empowering farmers with data-driven decisions and helping them stay informed and organized..
 
