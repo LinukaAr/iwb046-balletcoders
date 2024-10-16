@@ -1,9 +1,9 @@
 const openShopping = document.querySelector(".shopping"),
     closeShopping = document.querySelector(".closeShopping"),
+    body = document.querySelector("body"),
     list = document.querySelector(".list"),
     listCard = document.querySelector(".listCard"),
     total = document.querySelector(".total"),
-    body = document.querySelector("body"),
     quantity = document.querySelector(".quantity")
 
 openShopping.addEventListener("click", () => {
@@ -112,7 +112,7 @@ const reloadCard = () => {
         if (value != null) {
             let newDiv = document.createElement("li");
             newDiv.innerHTML = `
-                <div><img src = "img/${value.image}"></div>
+                <div><img src = "${value.image}"></div>
                 <div class = "cardTitle">${value.name}</div>
                 <div class = "cardPrice">${value.price.toLocaleString()}</div>
 
