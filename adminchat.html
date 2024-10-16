@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/adminchat.css">
+    <title>Admin Chat</title>
+</head>
+<body>
+    <!-- Admin Dashboard HTML -->
+<div class="admin-container">
+    <div class="admin-header">
+        <h1>Admin Dashboard</h1>
+    </div>
+    <div class="chat-section">
+        <h2>Active Chats</h2>
+        <ul id="chat-list">
+            <!-- Chat conversations will be listed here -->
+        </ul>
+    </div>
+    <div class="chat-box" id="admin-chat-box">
+        <div class="chat-header">
+            <h3>Chat with User</h3>
+        </div>
+        <div class="chat-body" id="admin-chat-body">
+            <!-- Messages will appear here -->
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="admin-message-input" placeholder="Type your message...">
+            <button onclick="sendAdminMessage()">Send</button>
+        </div>
+    </div>
+</div>
+<script>
+     const ws = new WebSocket("ws://localhost:9090");
+
+// Event listener for incoming messages
+ws.onmessage = function(event) {
+    const chat = document.getElementById("chat");
+    chat.innerHTML += `<p>Client: ${event.data}</p>`;
+    chat.scrollTop = chat.scrollHeight; // Scroll to the bottom
+};
+
+// Function to send messages
+function sendAdminMessage() {
+    const adminMessageInput = document.getElementById("admin-message-input");
+    if (adminMessageInput.value) {
+        ws.send("Admin: " + adminMessageInput.value);
+        adminMessageInput.value = '';
+    }
+}
+
+
+ws.onopen = function() {
+    console.log("Connected to WebSocket server.");
+};
+
+ws.onmessage = function(event) {
+    console.log("Message received: " + event.data);
+};
+
+ws.onerror = function(error) {
+    console.error("WebSocket error: ", error);
+};
+
+ws.onclose = function(event) {
+    console.log("WebSocket connection closed: ", event.reason);
+};
+
+</script>
+</body>
+</html>

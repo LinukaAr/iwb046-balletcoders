@@ -136,7 +136,6 @@ function fetchNewsData() {
     },
     error: (xhr, status, error) => {
       console.error("Error fetching news:", error);
-      alert("Failed to fetch news data.");
     }
   });
 }
@@ -145,3 +144,61 @@ function fetchNewsData() {
 $(document).ready(function() {
   fetchNewsData();
 });
+
+
+//----------------------------------------------chat--------------------------------------------
+document.addEventListener("DOMContentLoaded", function() {
+  const chatIcon = document.getElementById("chatIcon");
+  const chatWindow = document.getElementById("chatWindow");
+  const closeChat = document.getElementById("closeChat");
+
+  // Open chat window
+  chatIcon.addEventListener("click", function() {
+      chatWindow.style.display = "flex";
+  });
+
+  // Close chat window
+  closeChat.addEventListener("click", function() {
+      chatWindow.style.display = "none";
+  });
+});
+
+const ws = new WebSocket("ws://localhost:9090");
+
+        // Event listener for incoming messages
+        ws.onmessage = function(event) {
+            const chat = document.getElementById("chat");
+            chat.innerHTML += `<p>${event.data}</p>`;
+            chat.scrollTop = chat.scrollHeight; // Scroll to the bottom
+        };
+
+        // Function to send messages
+        function sendMessage() {
+            const messageInput = document.getElementById("message");
+            if (messageInput.value) {
+                ws.send(messageInput.value);
+                messageInput.value = '';
+            }
+          }
+          
+
+
+          ws.onopen = function() {
+              console.log("Connected to WebSocket server.");
+          };
+          
+          ws.onmessage = function(event) {
+              console.log("Message received: " + event.data);
+          };
+          
+          ws.onerror = function(event) {
+              console.error("WebSocket error: ", event);
+              // alert("WebSocket error: " + JSON.stringify(event));
+          };
+          
+          ws.onclose = function(event) {
+              console.log("WebSocket connection closed: ", event.reason);
+              // alert("WebSocket connection closed: " + event.reason);
+          };
+          
+          

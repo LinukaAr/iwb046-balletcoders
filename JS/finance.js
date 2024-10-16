@@ -20,9 +20,9 @@ function calculateLoan() {
   if (isFinite(monthly)) {
     document.getElementById("loan-result").innerHTML = `
       <h3>Loan Summary</h3>
-      <p>Monthly Payment: $${monthly.toFixed(2)}</p>
-      <p>Total Payment: $${(monthly * payments).toFixed(2)}</p>
-      <p>Total Interest: $${(monthly * payments - principal).toFixed(2)}</p>
+      <p>Monthly Payment: Rs${monthly.toFixed(2)}</p>
+      <p>Total Payment: Rs${(monthly * payments).toFixed(2)}</p>
+      <p>Total Interest: Rs${(monthly * payments - principal).toFixed(2)}</p>
     `;
   } else {
     alert("Please check your numbers");
