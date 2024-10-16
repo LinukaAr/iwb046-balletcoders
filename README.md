@@ -5,20 +5,20 @@
 
 [![Ceylon Agricare Demo](https://img.youtube.com/vi/oEbNXQ7IdWk/maxresdefault.jpg)](https://youtu.be/oEbNXQ7IdWk)
 
+[![Play Video](https://img.icons8.com/fluency/48/000000/play.png)](https://youtu.be/oEbNXQ7IdWk)
 
-<i>Farmer's Multi-Tool</i>
-
+<i>Play the Demo</i>
 </div>
 
+<div align="center">
+Ceylon Agricare is a comprehensive web application designed to assist farmers in managing their daily agricultural activities more efficiently. It provides essential tools like a marketplace for farm supplies, weather updates, and various other features to help optimize farming operations and improve productivity.
+</div>
+</br>
 <div align = "center">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 </table>
-</div>
-
-<div align="center">
-Ceylon Agricare is a comprehensive web application designed to assist farmers in managing their daily agricultural activities more efficiently. It provides essential tools like a marketplace for farm supplies, weather updates, and various other features to help optimize farming operations and improve productivity.
 </div>
 
 <hr>
