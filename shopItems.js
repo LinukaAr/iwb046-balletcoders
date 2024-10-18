@@ -194,7 +194,7 @@ export const products = [
         "detail1": "Type: Farming Machinery",
         "detail2": "Place: Monaragala",
         "productPrice": "95000",
-        "productImg": "images/Shop/tool22.png"
+        "productImg": "images/Shop/tool22.webp"
     },
 
     {
@@ -203,7 +203,7 @@ export const products = [
         "detail1": "Type: Farming Machinery",
         "detail2": "Place: Kuruneagala",
         "productPrice": "70000",
-        "productImg": "images/Shop/tool23.webp"
+        "productImg": "images/Shop/tool23_1.jpg"
     },
 
     {
@@ -221,7 +221,7 @@ export const products = [
         "detail1": "Type: Farming Machinery",
         "detail2": "Place: Jaffna",
         "productPrice": "170000",
-        "productImg": "images/Shop/tool25.jpg"
+        "productImg": "images/Shop/tool25_1.webp"
     },
 
 ]   
