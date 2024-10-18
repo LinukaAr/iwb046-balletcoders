@@ -181,47 +181,47 @@ export const products = [
 
     {
         "id": "21",
-        "productName": "Rolex watch",
-        "detail1": "Type: Chilli-SP",
-        "detail2": "Weight: 2kg",
-        "productPrice": "2000",
-        "productImg": "watch.png"
+        "productName": "68CC Mini Tiller Tractor Machine",
+        "detail1": "Type: Farming Machinery",
+        "detail2": "Place: Puttalam",
+        "productPrice": "69900",
+        "productImg": "images/Shop/tool21.jpg"
     },
 
     {
         "id": "22",
-        "productName": "Rolex watch",
-        "detail1": "Type: Chilli-SP",
-        "detail2": "Weight: 2kg",
-        "productPrice": "2000",
-        "productImg": "watch.png"
+        "productName": "Farming disk",
+        "detail1": "Type: Farming Machinery",
+        "detail2": "Place: Monaragala",
+        "productPrice": "95000",
+        "productImg": "images/Shop/tool22.png"
     },
 
     {
         "id": "23",
-        "productName": "Rolex watch",
-        "detail1": "Type: Chilli-SP",
-        "detail2": "Weight: 2kg",
-        "productPrice": "2000",
-        "productImg": "watch.png"
+        "productName": "Milking Machine",
+        "detail1": "Type: Farming Machinery",
+        "detail2": "Place: Kuruneagala",
+        "productPrice": "70000",
+        "productImg": "images/Shop/tool23.webp"
     },
 
     {
         "id": "24",
-        "productName": "Rolex watch",
-        "detail1": "Type: Chilli-SP",
-        "detail2": "Weight: 2kg",
-        "productPrice": "2000",
-        "productImg": "watch.png"
+        "productName": "Mud Wheel",
+        "detail1": "Type: Farming Machinery",
+        "detail2": "Place: Anuradhapura",
+        "productPrice": "40000",
+        "productImg": "images/Shop/tool24.webp"
     },
 
     {
         "id": "25",
-        "productName": "Rolex watch",
-        "detail1": "Type: Chilli-SP",
-        "detail2": "Weight: 2kg",
-        "productPrice": "2000",
-        "productImg": "watch.png"
+        "productName": "Farming Disk Plough",
+        "detail1": "Type: Farming Machinery",
+        "detail2": "Place: Jaffna",
+        "productPrice": "170000",
+        "productImg": "images/Shop/tool25.jpg"
     },
 
 ]   
