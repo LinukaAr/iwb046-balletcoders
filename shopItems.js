@@ -113,7 +113,7 @@ export const products = [
         "detail1": "Type: Seeds(TA2)",
         "detail2": "Weight: 100g",
         "productPrice": "600",
-        "productImg": "images/Shop/seed3.webp"
+        "productImg": "images/Shop/seed15.webp"
     },
 
     {
@@ -122,7 +122,7 @@ export const products = [
         "detail1": "Type: Seeds",
         "detail2": "Weight: 100g",
         "productPrice": "80",
-        "productImg": "images/Shop/seed5.jpg"
+        "productImg": "images/Shop/seed16.webp"
     },
 
     {
@@ -176,7 +176,7 @@ export const products = [
         "detail1": "Type: Seeds",
         "detail2": "Weight: 100g",
         "productPrice": "90",
-        "productImg": "images/Shop/seed11.jpg"
+        "productImg": "images/Shop/seed7.webp"
     },
 
     {
