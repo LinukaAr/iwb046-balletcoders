@@ -73,6 +73,15 @@ export const products = [
 
     {
         "id": "9",
+        "productName": "Vegetable Fertilizer",
+        "detail1": "Stage: TDM",
+        "detail2": "Weight: 20kg",
+        "productPrice": "8200",
+        "productImg": "images/Shop/8.png"
+    },
+
+    {
+        "id": "10",
         "productName": "Chillie Fertilizer",
         "detail1": "Type: Chilli-SP",
         "detail2": "Weight: 2kg",
@@ -81,80 +90,138 @@ export const products = [
     },
 
     {
-        "id": "10",
-        "productName": "Rolex watch",
-        "productPrice": "2000",
-        "productImg": "watch.png"
-    },
-
-    {
         "id": "11",
-        "productName": "Osprey Backpack",
-        "productPrice": "49.98",
-        "productImg": "bag.png"
+        "productName": "Sweet Watermelon",
+        "detail1": "Type: Seeds",
+        "detail2": "Weight: 200g",
+        "productPrice": "80",
+        "productImg": "images/Shop/seed1.webp"
     },
 
     {
         "id": "12",
-        "productName": "hidesign Mens Footwear",
-        "productPrice": "69.86",
-        "productImg": "black-shoes.png"
+        "productName": "Hot Pepper",
+        "detail1": "Type: Seeds",
+        "detail2": "Weight: 300g",
+        "productPrice": "500",
+        "productImg": "images/Shop/seed2.webp"
     },
 
     {
         "id": "13",
-        "productName": "Raymond Men's Trousers",
-        "productPrice": "7.82",
-        "productImg": "cargo-shorts.png"
+        "productName": "Snake Gourd",
+        "detail1": "Type: Seeds(TA2)",
+        "detail2": "Weight: 100g",
+        "productPrice": "600",
+        "productImg": "images/Shop/seed3.webp"
     },
 
     {
         "id": "14",
-        "productName": "Titan Eyeglass",
-        "productPrice": "14.00",
-        "productImg": "cat-eye-glasses.png"
+        "productName": "Ridge Gourd",
+        "detail1": "Type: Seeds",
+        "detail2": "Weight: 100g",
+        "productPrice": "80",
+        "productImg": "images/Shop/seed5.jpg"
     },
 
     {
         "id": "15",
-        "productName": "Russell Athletic's hoodie",
-        "productPrice": "22.50",
-        "productImg": "hoodie.png"
+        "productName": "Red Winged Beans",
+        "detail1": "Type: Seeds",
+        "detail2": "Weight: 200g",
+        "productPrice": "140",
+        "productImg": "images/Shop/seed6.webp"
     },
 
     {
         "id": "16",
-        "productName": "Apple MacBook Pro",
-        "productPrice": "1599.00",
-        "productImg": "laptop.png"
+        "productName": "Capsicums",
+        "detail1": "Type: Seeds",
+        "detail2": "Weight: 100g",
+        "productPrice": "80",
+        "productImg": "images/Shop/seed13.webp"
     },
 
     {
         "id": "17",
-        "productName": "Levi's shirt",
-        "productPrice": "7.04",
-        "productImg": "shirt.png"
+        "productName": "Bombay Onion",
+        "detail1": "Type: Seeds",
+        "detail2": "Weight: 200",
+        "productPrice": "160",
+        "productImg": "images/Shop/seed12.jpg"
     },
 
     {
         "id": "18",
-        "productName": "rock dove slippers",
-        "productPrice": "28.00",
-        "productImg": "slipper.png"
+        "productName": "Butter Beans",
+        "detail1": "Type: Seeds",
+        "detail2": "Weight: 100g",
+        "productPrice": "80",
+        "productImg": "images/Shop/seed8.jpg"
     },
 
     {
         "id": "19",
-        "productName": "t-shirts at J.Crew",
-        "productPrice": "19.50",
-        "productImg": "t-shirt.png"
+        "productName": "Raddish",
+        "detail1": "Type: Seeds",
+        "detail2": "Weight: 100g",
+        "productPrice": "80",
+        "productImg": "images/Shop/seed9.jpg"
     },
 
     {
         "id": "20",
+        "productName": "Tomato",
+        "detail1": "Type: Seeds",
+        "detail2": "Weight: 100g",
+        "productPrice": "90",
+        "productImg": "images/Shop/seed11.jpg"
+    },
+
+    {
+        "id": "21",
         "productName": "Rolex watch",
+        "detail1": "Type: Chilli-SP",
+        "detail2": "Weight: 2kg",
         "productPrice": "2000",
         "productImg": "watch.png"
-    }
+    },
+
+    {
+        "id": "22",
+        "productName": "Rolex watch",
+        "detail1": "Type: Chilli-SP",
+        "detail2": "Weight: 2kg",
+        "productPrice": "2000",
+        "productImg": "watch.png"
+    },
+
+    {
+        "id": "23",
+        "productName": "Rolex watch",
+        "detail1": "Type: Chilli-SP",
+        "detail2": "Weight: 2kg",
+        "productPrice": "2000",
+        "productImg": "watch.png"
+    },
+
+    {
+        "id": "24",
+        "productName": "Rolex watch",
+        "detail1": "Type: Chilli-SP",
+        "detail2": "Weight: 2kg",
+        "productPrice": "2000",
+        "productImg": "watch.png"
+    },
+
+    {
+        "id": "25",
+        "productName": "Rolex watch",
+        "detail1": "Type: Chilli-SP",
+        "detail2": "Weight: 2kg",
+        "productPrice": "2000",
+        "productImg": "watch.png"
+    },
 
 ]   
