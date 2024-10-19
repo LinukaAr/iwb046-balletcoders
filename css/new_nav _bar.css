@@ -74,6 +74,10 @@ nav ul li a {
   padding: 1rem;
 }
 
+.nav-item{
+  padding-right: 45px;
+}
+
 .nav-link {
   color: black !important; /* Default black color */
   font-size: 17px !important;
