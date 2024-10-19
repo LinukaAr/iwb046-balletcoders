@@ -7,13 +7,13 @@
     list-style-type: none;
 }
 
-body{
+.shopContainer{
     font-family: 'Poppins', sans-serif;
     background-color: #e6fcd2;
 }
 
 /* Header Styles */
-header{
+.shopNavBar{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -41,20 +41,20 @@ header{
     font-size: 1.6rem;
 }
 
-.nav{
+.shop-nav{
     display: flex;
     align-items: center;
     font-weight: bold;
 }
 
-.navLink{
+.shop-navLink{
     margin-right: .5em;
     font-weight: 500;
     cursor: pointer;
     transition: all .5s ease-in-out;
 }
 
-.navLink:hover{
+.shop-navLink:hover{
     opacity: .5;
 }
 
