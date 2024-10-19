@@ -445,6 +445,9 @@ button {
     display: flex;
 }
 
+.navbar{
+    background-color: transparent;
+}
 .site-navbar ul li a {
     color: #1c1c1b;
     font-size: 17px;

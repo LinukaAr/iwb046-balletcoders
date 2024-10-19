@@ -15,58 +15,74 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Responsive-->
     <link rel="stylesheet" href="css/responsive.css">
-   
+    <link rel="stylesheet" href="css/new_nav _bar.css">
+
     <!-- Tweaks for older IEs-->
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    
+
 
 </head>
 
 <body class="main-layout">
     <div class="full_bg">
         <!-- header section starts-->
-        <header class="header-area">
-            <div class="container-fluid">
-                <div class="row d_flex">
-                    <div class=" col-md-2 col-sm-3">
-                        <div class="logo">
-                            <a href="index.html">Ceylon.<span>AgriCare</span></a>
-                        </div>
-                    </div>
-                    <div class="col-md-8 col-sm-9">
-                        <div class="navbar-area">
-
-                            <nav class="site-navbar">
-                                <ul>
-                                    <li><a class="active" href="index.html">Home</a></li>
-                                    <li><a href="#about">About</a></li>
-                                    <li><a href="#services">Services</a></li>
-                                    <li><a href="#news">News</a></li>
-                                    <li><a href="weather.html">Weather</a></li>
-                                    <li><a target="_blank" href="shop.html">Shop</a></li>
-                                    <li><a href="finance.html">Finance</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-
-                            </nav>
-                        </div>
+        <header class="header-area1">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a class="navbar-brand logo" href="index.html">CEYLON.<span>AGRICARE</span></a>
                     </div>
 
-                    <div class="col-md-2 padd_0 d_none">
-                        <ul class="email text_align_right">
-                            <!--Menu-Icon-->
-                            <li><i class='fa fa-bars' id="menu-icon"></i></li>
-                            <li><a href="login.html"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
-                            </li>
-                            <li><i class="fa fa-search" aria-hidden="true" id="search-icon"></i>
-                            </li>
+                    <!-- Toggle Button for Mobile View -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
+                    <!-- Navbar Links -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#services">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#news">News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="weather.html">Weather</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" target="_blank" href="shop.html">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="finance.html">Finance</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact Us</a>
+                            </li>
+                        </ul>
+
+                        <!-- Right Corner Icons -->
+                        <ul class="navbar-nav right-icons">
+                            <li class="nav-item">
+                                <a href="login.html"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <i class="fa fa-search" aria-hidden="true" id="search-icon"></i></a>
+                            </li>
                         </ul>
                     </div>
                 </div>
-            </div>
+            </nav>
         </header>
         <!-- header section ends -->
 
@@ -135,25 +151,25 @@
     <!-- top ends -->
 
     <!-- chat starts -->
-   <!-- Chat Icon and Chat Window -->
-   <div class="chat-container">
-    <div class="chat-icon" id="chatIcon">
-        <span>💬</span>
+    <!-- Chat Icon and Chat Window -->
+    <div class="chat-container">
+        <div class="chat-icon" id="chatIcon">
+            <span>💬</span>
+        </div>
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <span>Chat with Us</span>
+                <button class="close-btn" id="closeChat">&times;</button>
+            </div>
+            <div class="chat-body">
+                <p>Hello! How can we assist you today?</p>
+            </div>
+            <div class="chat-footer">
+                <input type="text" placeholder="Type your message..." id="chatInput">
+                <button>Send</button>
+            </div>
+        </div>
     </div>
-    <div class="chat-window" id="chatWindow">
-        <div class="chat-header">
-            <span>Chat with Us</span>
-            <button class="close-btn" id="closeChat">&times;</button>
-        </div>
-        <div class="chat-body">
-            <p>Hello! How can we assist you today?</p>
-        </div>
-        <div class="chat-footer">
-            <input type="text" placeholder="Type your message..." id="chatInput">
-            <button>Send</button>
-        </div>
-    </div>
-</div>
 
 
     <!-- chat end -->
@@ -289,53 +305,53 @@
     <!-- choose -->
 
     <!-- news -->
-<section id="news" class="news">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="titlepage text_align_left">
-                    <h2>Top Stories</h2>
+    <section id="news" class="news">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage text_align_left">
+                        <h2>Top Stories</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="latest">
+                        <figure><img id="imgN1" class="rounded-t-lg" src="" alt="" /></figure>
+                        <span id="ptime1">Looking for new news...</span>
+                        <div class="nostrud">
+                            <h3 id="title1"></h3>
+                            <p id="p1"></p>
+                            <a class="read_more" href="#!" id="a1">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="latest box_desho">
+                        <figure><img id="imgN2" class="rounded-t-lg" src="" alt="" /></figure>
+                        <span id="ptime2">Looking for new news...</span>
+                        <div class="nostrud">
+                            <h3 id="title2"></h3>
+                            <p id="p2"></p>
+                            <a class="read_more" href="#!" id="a2">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="latest">
+                        <figure><img id="imgN3" class="rounded-t-lg" src="" alt="" /></figure>
+                        <span id="ptime3">Looking for new news...</span>
+                        <div class="nostrud">
+                            <h3 id="title3"></h3>
+                            <p id="p3"></p>
+                            <a class="read_more" href="#!" id="a3">Read More</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="latest">
-                    <figure><img id="imgN1" class="rounded-t-lg" src="" alt="" /></figure>
-                    <span id="ptime1">Looking for new news...</span>
-                    <div class="nostrud">
-                        <h3 id="title1"></h3>
-                        <p id="p1"></p>
-                        <a class="read_more" href="#!" id="a1">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="latest box_desho">
-                    <figure><img id="imgN2" class="rounded-t-lg" src="" alt="" /></figure>
-                    <span id="ptime2">Looking for new news...</span>
-                    <div class="nostrud">
-                        <h3 id="title2"></h3>
-                        <p id="p2"></p>
-                        <a class="read_more" href="#!" id="a2">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="latest">
-                    <figure><img id="imgN3" class="rounded-t-lg" src="" alt="" /></figure>
-                    <span id="ptime3">Looking for new news...</span>
-                    <div class="nostrud">
-                        <h3 id="title3"></h3>
-                        <p id="p3"></p>
-                        <a class="read_more" href="#!" id="a3">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end news -->
+    </section>
+    <!-- end news -->
 
     <!-- customers -->
     <div class="customers">
